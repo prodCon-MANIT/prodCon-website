@@ -52,18 +52,18 @@ const AccordionItem = ({ question, answer }) => {
 export default function FAQ() {
   const faqs = [
     {
-      question: "What is ProdCon?",
+      question: "What does ProdCon actually do?",
       answer:
-        "ProdCon is a platform focused on solving real-world problems through innovation."
+      "ProdCon operates like a mini-consulting firm and a product school, offering hands-on exposure to business problems and tech innovations. From cracking case studies on market entry, we ensure our members gain experiential learning ."
     },
     {
-      question: "What we do?",
+      question: "Who can join ProdCon?",
       answer:
-        "l ,sbccos fsadvojfdalfd b gsnj fdz vDS vfzdngfbsdFSfafggf  b h gfh fd mgdh j zgds bxg ndhg mfgxb zb"
+        " Any student at MANIT Bhopal who is passionate about strategy, user experience, or business analysis can join. Whether you're from CS, Mech, or even Civil — if you're intrigued by why some startups scale and others fail, this is your platform to learn and grow."
     },
     {
-      question: "Is ProdCon open to all?",
-      answer: "sdv fdhgdmfj,gfjh,jhf,hk ,hgndf v XV Vxc xbz ng zh gS Few rae hrsyjr sthzdf S DFfda gs h gsg fdf zsdgshsrhstgdfDSfdsf a."
+      question: "How does ProdCon help with placements?",
+      answer: " Consulting and PM roles demand structured thinking, communication, and a business-first mindset. At ProdCon, we run mock placement drives, resume reviews, and case prep cohorts, ensuring that our members are ready to crack roles in companies like Flipkart , Amazon and Microsoft. Our alumni network  supports placement strongly."
     }
   ];
 
