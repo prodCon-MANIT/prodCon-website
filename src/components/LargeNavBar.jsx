@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
-import logo from "../assets/ProdCon_Logo.svg";
 import fullLogo from "../assets/ProdCon_fullLogo.svg";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaDiscord,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
 
 export default function LargeNavBar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Track current active section on homepage
   const [activeSection, setActiveSection] = useState("home");
+  const [scrolled, setScrolled] = useState(false); // ← NEW: scroll state
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); // adjust the threshold as needed
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const actions = [
     {
@@ -65,10 +65,7 @@ export default function LargeNavBar() {
       label: "About",
       onClick: () => {
         navigate("/about");
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // for smooth scrolling
-        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setActiveSection("");
       },
       path: "/about",
@@ -77,10 +74,7 @@ export default function LargeNavBar() {
       label: "Contact",
       onClick: () => {
         navigate("/contact");
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // for smooth scrolling
-        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setActiveSection("");
       },
       path: "/contact",
@@ -88,44 +82,52 @@ export default function LargeNavBar() {
   ];
 
   return (
-    <header className="hidden md:flex  fixed top-0 left-0 w-full  shadow-md z-50 items-center px-8 h-16">
-      {/* Logo on left */}
-      <div
-        className="text-2xl font-bold text-white cursor-pointer select-none"
-        onClick={() => scroll.scrollToTop({ duration: 500 })}
-      >
-        <img
-          src={fullLogo}
-          alt="ProdCon Logo"
-          className="size-50 object-contain"
-        />
-      </div>
-
+    <header className="hidden md:flex fixed top-0 left-0 w-full z-50 items-center px-8">
       <div className="flex-grow" />
 
-      <nav>
-        <ul className="flex space-x-8 text-white font-medium text-lg">
-          {actions.map(({ label, onClick, path, section }, i) => {
-            let isActive = false;
+      <nav
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    position: "fixed",
+    left: "50%",
+    top:"20px",
+    transform: "translateX(-50%)",
+    width: "60rem",
+    zIndex: 50,
+    background: scrolled ? "rgba(17, 25, 40, 0.75)" : "transparent",
+    borderRadius: "2rem",
+    backdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
+    WebkitBackdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
+    padding: "0.75rem 2rem",
+    height: "4.2rem",
+    fontSize: "1rem",
+    border: scrolled ? "1px solid rgba(255, 255, 255, 0.125)" : "none",
+    boxShadow: scrolled ? "0 4px 30px rgba(0, 0, 0, 0.5)" : "none",
+    transition: "all 0.3s ease-in-out",
+  }}
+>
 
-            if (path !== "/") {
-              // For non-home routes, active if path matches
-              isActive = location.pathname === path;
-            } else {
-              // For home route, active if current scroll section matches
-              isActive = location.pathname === "/" && activeSection === section;
-            }
+        <img src={fullLogo} alt="ProdCon Logo" className="h-40 object-contain" />
+        <ul className="flex space-x-6 text-white font-medium text-lg">
+          {actions.map(({ label, onClick, path, section }, i) => {
+            const isActive =
+              path !== "/"
+                ? location.pathname === path
+                : location.pathname === "/" && activeSection === section;
 
             return (
-              <li key={i}>
+              <li key={i} className="relative group">
                 <button
-                  className={`transition-colors duration-200 focus:outline-none ${
-                    isActive ? "text-blue-700 underline" : "text-white"
+                  className={`relative z-10 px-4 py-2 rounded-full transition duration-300 focus:outline-none ${
+                    isActive ? "text-purple-400" : "text-white"
                   }`}
                   onClick={onClick}
                 >
                   {label}
                 </button>
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 blur-md bg-gradient-to-r from-purple-600 to-purple-400" />
               </li>
             );
           })}
@@ -134,6 +136,7 @@ export default function LargeNavBar() {
     </header>
   );
 }
+
 
 {
   /* <div className="ml-10 flex space-x-6 text-gray-300 text-xl">
