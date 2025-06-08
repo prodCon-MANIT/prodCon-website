@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
-import About from './components/About';
+import About from './components/About.tsx';
 import Contact from './components/Contact';
 import Home from './components/Home';
 
