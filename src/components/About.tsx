@@ -1,6 +1,26 @@
 import React, { useEffect, useRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from "react-router-dom";
 
+const Abouu = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const elementId = hash.replace("#", "");
+      
+      // Delay to wait for motion.div to render
+      const timeout = setTimeout(() => {
+        const el = document.getElementById(elementId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500); // Wait until Framer Motion animations are done
+
+      return () => clearTimeout(timeout);
+    }
+  }, [hash]);
+}
 interface Particle {
   x: number;
   y: number;
@@ -270,7 +290,7 @@ Beyond events, we orchestrate high-impact competitions, thought-provoking panel 
       </motion.section>
 
       {/* Resources Section */}
-      <motion.div
+      <motion.div  id ="resource123"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}

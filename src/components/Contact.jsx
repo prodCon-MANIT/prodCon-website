@@ -217,7 +217,7 @@ function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-2 text-base">Email Us</h3>
-                  <a href="mailto:prodconmanit@gmail.com" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">contact@prodconnitb.in</a>
+                  <a href="mailto:prodconmanit@gmail.com" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">prodconmanit@gmail.com</a>
                 </div>
               </div>
 

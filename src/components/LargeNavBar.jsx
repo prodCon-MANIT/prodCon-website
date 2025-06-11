@@ -104,7 +104,7 @@ export default function LargeNavBar() {
     padding: "0.75rem 2rem",
     height: "4.2rem",
     fontSize: "1rem",
-    border: scrolled ? "1px solid rgba(255, 255, 255, 0.125)" : "none",
+    border: scrolled ? "1px solid rgba(255, 255, 255, 0.12)" : "none",
     boxShadow: scrolled ? "0 4px 30px rgba(0, 0, 0, 0.5)" : "none",
     transition: "all 0.3s ease-in-out",
   }}
@@ -122,13 +122,13 @@ export default function LargeNavBar() {
               <li key={i} className="relative group">
                 <button
                   className={`relative z-10 px-4 py-2 rounded-full transition duration-300 focus:outline-none ${
-                    isActive ? "text-purple-400" : "text-white"
+                    isActive ? "text-purple-300" : "text-white"
                   }`}
                   onClick={onClick}
                 >
                   {label}
                 </button>
-                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 blur-md bg-gradient-to-r from-purple-600 to-purple-400" />
+                <div className="absolute inset-1 border-solid-1px opacity-1 group-hover:opacity-100 transition duration-300 blur-md bg-gradient-to-r from-purple-600 to-purple-400" />
               </li>
             );
           })}
