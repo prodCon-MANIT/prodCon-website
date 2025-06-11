@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @import './custom.css';
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.6; }
+}
+
+.glow-animate {
+  animation: glowPulse 1.6s ease-in-out infinite;
+}

@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 const BlockInTextCard = ({text, examples }) => {
   return (
     <div className="w-full max-w-xl space-y-6">
-      <div>
-        <hr className="border-neutral-700" />
-      </div>
       <p className="max-w-lg text-xl leading-relaxed">{text}</p>
       <div>
         <Typewrite examples={examples} />
@@ -37,10 +34,10 @@ const Typewrite = ({ examples }) => {
   }, []);
 
   return (
-    <p className="mb-2.5 text-sm font-light uppercase">
+    <p className="mb-2.5 text-md font-light uppercase">
       {/* <span className="inline-block size-2 bg-neutral-950" /> */}
       <span>
-        WE ARE:{" "}
+        <span className="text-indigo-300">we are</span>{" "}
         {examples[exampleIndex].split("").map((l, i) => (
           <motion.span
             initial={{

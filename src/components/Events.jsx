@@ -1,6 +1,9 @@
 
 import React, { useState } from "react";
 import web_gradient from "../assets/web_gradient_rev.png";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const eventsData = [
   {
     title: "Event",
@@ -213,3 +216,88 @@ const Events = () => {
 };
 
 export default Events;
+
+
+// three cards at large screen, two cards at medium screen, one card at small screen
+
+// const Events = () => {
+//   const settings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 400,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     arrows: true,
+//     centerMode: true,
+//     centerPadding: "0px",
+//     responsive: [
+//       {
+//         breakpoint: 768, // mobile
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//       {
+//         breakpoint: 1024, // tablets
+//         settings: {
+//           slidesToShow: 2,
+//         },
+//       },
+//     ],
+//   };
+
+//   return (
+//     <section
+//       id="event-section"
+//       className="w-full mx-auto bg-cover bg-center relative flex flex-col items-center justify-center select-none"
+//       style={{ backgroundImage: `url(${web_gradient})` }}
+//     >
+//       <div className="absolute inset-0 bg-black/50" />
+//       <div className="text-center m-20 z-10">
+//         <h1 className="text-6xl font-bold text-white mb-4">Our Events</h1>
+//         <div className="flex items-center justify-center gap-4">
+//           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+//           <span className="text-white/90 text-lg font-light">From Ideas to Impact</span>
+//           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+//         </div>
+//       </div>
+
+//       <div className="w-[90%] max-w-6xl z-20 relative py-10">
+//         <Slider {...settings}>
+//           {eventsData.map((event, idx) => (
+//             <div key={idx} className="px-3">
+//               {/* Use your exact card structure here */}
+//               <div className="poppins-bold flex justify-center">
+//                 <div
+//                   className="flex flex-col items-start p-8 gap-2 w-[90vw] md:w-[40vw] xl:w-[28vw] bg-white"
+//                   style={{ borderRadius: 10 }}
+//                 >
+//                   <div className="flex justify-center w-full">
+//                     <img
+//                       src={event.image}
+//                       alt={event.title}
+//                       className="aspect-square"
+//                     />
+//                   </div>
+//                   <h4 className="sm:text-xl uppercase w-full">{event.title}</h4>
+//                   <p className="w-full sm:text-base text-sm continue-text">
+//                     {event.description}
+//                   </p>
+//                   <button
+//                     className="transition-all text-yellow-400 hover:text-[#FCA311] p-2 rounded bg-[#14213D] sm:text-lg text-sm"
+//                     type="button"
+//                   >
+//                     Read More
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </Slider>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Events;
