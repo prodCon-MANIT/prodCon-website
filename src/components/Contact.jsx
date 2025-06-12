@@ -73,18 +73,18 @@ function Contact() {
           </div>
 
           {/* Become Sponsor Section */}
-          <div style={{
+          <div id="flexedit" style={{
             backgroundColor: "white",
             borderRadius: "12px",
             padding: "40px",
             display: "flex",
             alignItems: "center",
-            gap: "45px",
+            gap: "22px",
             width: "90%",
             maxWidth: "1000px",
             margin: "0 auto",
             position: "relative",
-            bottom: "-140px",
+            bottom: "-80px",
             zIndex: "1"
           }}>
             <h2 style={{
@@ -93,13 +93,14 @@ function Contact() {
               margin: 0,
               color: "#000000"
             }}>
-              Become our<br />Sponsor
+              Become our Sponsor
             </h2>
-            <div style={{
+            <div id="flexedit2" style={{
               flex: 1,
               backgroundColor: "#F8F8F8",
               borderRadius: "16px",
               padding: "8px",
+              width: "90%",
               display: "flex",
               alignItems: "center",
               gap: "8px",
