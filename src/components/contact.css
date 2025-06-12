@@ -90,3 +90,13 @@
       height: 58vh !important;
     }
   }
+  #flexedit{
+  @media screen and (max-width: 650px) {
+  flex-direction: column
+}
+}
+#flexedit2{
+  @media screen and (max-width: 650px) {
+  flex-direction: column
+}
+}
