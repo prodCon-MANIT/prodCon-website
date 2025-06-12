@@ -17,11 +17,18 @@ export default function Footer() {
   };
 
   const socialLinks = [
+ main
     { icon: <Facebook size={20} />, href: '#' },
     { icon: <Twitter size={20} />, href: '#' },
-    { icon: <Instagram size={20} />, href: 'https://www.instagram.com/prodcon.manit/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#' },
+   
     { icon: <Github size={20} />, href: '#' },
-    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/prodcon-the-product-consulting-club-manit-bhopal%C2%A0-nit-b/' },
+    { 
+=======
+  
+    { icon: <Twitter size={30} />, href: '#' },
+    { icon: <Instagram size={30} />, href: 'https://www.instagram.com/prodcon.manit/?hl=en' },
+ 
+    { icon: <Linkedin size={30} />, href: 'https://www.linkedin.com/company/prodcon-the-product-consulting-club-manit-bhopal%C2%A0-nit-b/' }, main
   ];
 
   return (

@@ -23,7 +23,7 @@ function useWindowSize() {
 // Mobile-only sidebar animations
 const sidebarVariants = {
   open: ({ radius }) => ({
-    clipPath: `circle(${radius}px at 90% 20px)`,
+    clipPath: `circle(${radius}px at 50% 20px)`,
     transition: { duration: 1.2, ease: "easeInOut" },
   }),
   closed: {
