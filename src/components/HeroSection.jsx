@@ -118,7 +118,7 @@ function HeroSection() {
               Know more
             </a>
             <a
-              href="/resources"
+              href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn"
               className="flex justify-center items-center border border-white text-base sm:text-xl text-white font-semibold px-4 sm:px-5 py-2 rounded-full shadow-md hover:bg-white hover:text-indigo-900 transition-transform transform hover:scale-105"
             >
               Resource
