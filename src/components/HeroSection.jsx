@@ -54,7 +54,7 @@ function HeroSection() {
         className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-0 items-center"
       >
         <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-2">
-          𝐰𝐞 𝐚𝐫𝐞,
+          W𝐞 𝐚𝐫𝐞,
         </h2>
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-2">
           <span className="inline-flex text-left whitespace-nowrap">
@@ -102,7 +102,7 @@ function HeroSection() {
           />
 
           <p className="mt-6 mb-6 text-base sm:text-lg leading-relaxed text-justify text-white/90">
-            Welcome to the <strong>Products and Consulting Club</strong> of MANIT Bhopal —
+            Welcome to the <strong>Product and Consulting Club</strong> of MANIT Bhopal —
             where <span className="text-purple-300 font-medium">ideas meet industry</span>. 
             We bridge academic knowledge with real‐world consulting and product management skills. 
             Our initiatives include <strong>case studies</strong>, <strong>guesstimates</strong>, and <strong>mock interviews</strong>. 
@@ -118,7 +118,7 @@ function HeroSection() {
               Know more
             </a>
             <a
-              href="/resources"
+              href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn"
               className="flex justify-center items-center border border-white text-base sm:text-xl text-white font-semibold px-4 sm:px-5 py-2 rounded-full shadow-md hover:bg-white hover:text-indigo-900 transition-transform transform hover:scale-105"
             >
               Resource

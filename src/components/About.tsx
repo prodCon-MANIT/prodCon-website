@@ -318,7 +318,7 @@ Beyond events, we orchestrate high-impact competitions, thought-provoking panel 
             gap: "1rem"
           }}>
             <a
-              href="https://drive.google.com/drive/folders/1your-folder-id"
+              href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn"
               target="_blank"
               rel="noopener noreferrer"
               style={{

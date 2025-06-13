@@ -33,7 +33,7 @@ function TeamMembers() {
       email: "mailto:example@email.com"
     },
     {
-      name: "Vanshita S.",
+      name: "username",
       position: "Co-Coordinator (Finance)",
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com",
