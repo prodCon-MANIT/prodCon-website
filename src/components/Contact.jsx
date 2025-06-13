@@ -45,7 +45,7 @@ function Contact() {
   ];
 
   return (
-    <div className="text-white font-sans">
+    <div id="shiva" className="text-white font-sans">
       {/* Header Section */}
       <div
         className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center text-black bg-black"
@@ -55,7 +55,7 @@ function Contact() {
         
         {/* Sponsor Section */}
         <div className="w-full max-w-6xl mx-auto z-10 px-4">
-          <h1 className="text-5xl font-bold text-white text-center mb-13">Our Media Sponsors</h1>
+          <h1 className="text-5xl font-bold text-white text-center mb-13"><br/>Our Media Sponsors</h1>
           
           {/* Sponsors Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb--10">
@@ -76,7 +76,7 @@ function Contact() {
           <div id="flexedit" style={{
             backgroundColor: "white",
             borderRadius: "12px",
-            padding: "40px",
+            padding: "20px",
             display: "flex",
             alignItems: "center",
             gap: "22px",
@@ -110,6 +110,7 @@ function Contact() {
                 type="email" 
                 placeholder="Your email"
                 style={{
+                  textAlign: "center",
                   flex: 1,
                   border: "none",
                   background: "transparent",
@@ -140,7 +141,7 @@ function Contact() {
       </div>
 
       {/* Location Section */}
-      <div style={{ marginTop: "-30px" }}>
+      <div style={{ marginTop: "0px" }}>
         <div
           className="relative bg-cover bg-center text-center text-white"
           style={{
