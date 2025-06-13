@@ -100,3 +100,6 @@
   flex-direction: column
 }
 }
+#shiva{
+  overflow-x: hidden;
+}
