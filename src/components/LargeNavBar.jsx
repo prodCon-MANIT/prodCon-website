@@ -99,8 +99,8 @@ export default function LargeNavBar() {
     zIndex: 50,
     background: scrolled ? "rgba(17, 25, 40, 0.75)" : "transparent",
     borderRadius: "2rem",
-    backdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
-    WebkitBackdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
+    backdropFilter: scrolled ? "blur(400px) saturate(200%)" : "none",
+    WebkitBackdropFilter: scrolled ? "blur(20px) saturate(80%)" : "none",
     padding: "0.75rem 2rem",
     height: "4.2rem",
     fontSize: "1rem",
@@ -110,7 +110,7 @@ export default function LargeNavBar() {
   }}
 >
 
-        <img src={fullLogo} alt="ProdCon Logo" className="h-40 object-contain" />
+        <img src={fullLogo} alt="ProdCon Logo" className="h-45 object-contain" />
         <ul className="flex space-x-6 text-white font-medium text-lg">
           {actions.map(({ label, onClick, path, section }, i) => {
             const isActive =
@@ -121,8 +121,8 @@ export default function LargeNavBar() {
             return (
               <li key={i} className="relative group">
                 <button
-                  className={`relative z-10 px-4 py-2 rounded-full transition duration-300 focus:outline-none ${
-                    isActive ? "text-purple-300" : "text-white"
+                  className={`relative z-10 px-5 py-2 rounded-3xl transition duration-300 focus:outline ${
+                    isActive ? "text-purple-600" : "text-white"
                   }`}
                   onClick={onClick}
                 >
@@ -136,31 +136,4 @@ export default function LargeNavBar() {
       </nav>
     </header>
   );
-}
-
-
-{
-  /* <div className="ml-10 flex space-x-6 text-gray-300 text-xl">
-        {[FaLinkedin, FaGithub, FaDiscord, FaInstagram, FaYoutube].map((Icon, i) => (
-          <button
-            key={i}
-            onClick={() =>
-              window.open(
-                [
-                  "https://linkedin.com",
-                  "https://github.com",
-                  "https://discord.com",
-                  "https://instagram.com",
-                  "https://youtube.com",
-                ][i],
-                "_blank"
-              )
-            }
-            aria-label="social"
-            className="hover:text-white transition-colors duration-200 focus:outline-none"
-          >
-            <Icon />
-          </button>
-        ))}
-      </div> */
 }

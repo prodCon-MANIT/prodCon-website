@@ -5,7 +5,7 @@ import myImage from "../assets/location-bg.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
   const sponsors = [
@@ -45,111 +45,79 @@ function Contact() {
   ];
 
   return (
-    <div className="text-white font-sans">
-      {/* Header Section */}
-      <div
-        className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center text-black bg-black"
-        style={{ backgroundImage: `url(${web_gradient})` }}
-      >
-        <div className="absolute w-[600px] h-[400px] bg-purple-700/30 rounded-full blur-[150px] top-[200px] left-[-150px] z-0" />
-        
-        {/* Sponsor Section */}
-        <div className="w-full max-w-6xl mx-auto z-10 px-4">
-          <h1 className="text-5xl font-bold text-white text-center mb-13">Our Media Sponsors</h1>
-          
-          {/* Sponsors Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb--10">
-            {sponsors.map((sponsor, index) => (
-              <a 
-                key={index}
-                href={sponsor.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white rounded-2xl p-6 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-              >
-                <span className="text-xl font-semibold text-black">{sponsor.name}</span>
-              </a>
-            ))}
-          </div>
+    <div className=" overflow-x-hidden  text-white font-sans">
+    <div
+  className="min-h-screen bg-cover bg-center flex flex-col items-center justify-end relative px-4 sm:px-6 md:px-8"
+  style={{ backgroundImage: `url(${web_gradient})` }}
+>
+  {/* Background blur blob */}
+  <div className="absolute w-48 sm:w-72 md:w-96 h-32 sm:h-48 md:h-64 bg-purple-700/10 rounded-full blur-2xl top-1 left-16 z-0" />
 
-          {/* Become Sponsor Section */}
-          <div style={{
-            backgroundColor: "white",
-            borderRadius: "12px",
-            padding: "40px",
-            display: "flex",
-            alignItems: "center",
-            gap: "45px",
-            width: "90%",
-            maxWidth: "1000px",
-            margin: "0 auto",
-            position: "relative",
-            bottom: "-140px",
-            zIndex: "1"
-          }}>
-            <h2 style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              margin: 0,
-              color: "#000000"
-            }}>
-              Become our<br />Sponsor
+  {/* Heading + Sponsors */}
+  <div className="z-10 w-full flex flex-col items-center">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-[57px]">
+      Our Media Sponsors
+    </h1>
+
+    {/* Sponsors Grid */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 w-full max-w-4xl py-4 px-9 sm:px-4">
+      {sponsors.map((sponsor, index) => (
+        <a
+          key={index}
+          href={sponsor.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white rounded-xl p-3 sm:p-6 flex items-center justify-center hover:scale-105 transition-transform duration-300"
+        >
+          <span className="text-base sm:text-lg font-semibold text-black">{sponsor.name}</span>
+        </a>
+      ))}
+    </div>
+  
+</div>
+
+
+        {/* Become Sponsor Section */}
+        <div className=" w-full px-4">
+          <div className="  top-full  bg-white rounded-xl p-3 md:p-7 flex flex-col md:flex-row items-center md:items-start justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
+            <h2 className="text-lg md:text-2xl font-bold text-black text-center md:text-left">
+            <span className="block sm:hidden">Become our Sponsor</span>
+  <span className="hidden sm:block">
+    Become our<br />Sponsor
+  </span>
             </h2>
-            <div style={{
-              flex: 1,
-              backgroundColor: "#F8F8F8",
-              borderRadius: "16px",
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              border: "2px solid #727171"
-            }}>
-              <input 
-                type="email" 
+            <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg p-2 sm:p-4 border border-gray-300">
+              <input
+                type="email"
                 placeholder="Your email"
-                style={{
-                  flex: 1,
-                  border: "none",
-                  background: "transparent",
-                  padding: "12px 16px",
-                  fontSize: "16px",
-                  color: "#666",
-                  outline: "none"
-                }}
+                className="flex-1 px-5 py-1 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base"
               />
-              <button 
-                type="submit" 
-                style={{
-                  backgroundColor: "#F2A53E",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "12px",
-                  padding: "5px 39px",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  cursor: "pointer"
-                }}
-              >
+             
+              <div>
+              <button className="mt-2 sm:mt-0 sm:ml-2 bg-yellow-500 text-white px-30 sm:px-5 py-3 rounded-lg text-sm md:text-base font-medium hover:bg-yellow-600 transition">
                 SUBMIT
               </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Location Section */}
-      <div style={{ marginTop: "-30px" }}>
+      <div >
         <div
           className="relative bg-cover bg-center text-center text-white"
           style={{
             backgroundImage: `url(${myImage})`,
             height: "600px",
+             backgroundSize: "cover",         // ensures the image covers the whole div
+    backgroundPosition: "center"
+            
           }}
         >
           <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center px-4">
             <h2 className="text-5xl font-bold text-[#D99343] mb-4">Location</h2>
-            <p className=" font-medium mb-2 font-bold text-5xl">Maulana Azad National Institute of Technology</p>
+            <p className=" font-medium mb-2 font-bold text-xl sm:text-5xl">Maulana Azad National Institute of Technology</p>
             <p className="text-md max-w-xl">
               <FontAwesomeIcon icon={faLocationDot} className="mr-2 text-white" />
 
@@ -186,7 +154,7 @@ function Contact() {
             Contact Us
             <div className="absolute w-30 h-0.5 bg-purple-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
           </h2>
-          
+
           <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-5xl mx-auto">
             {/* Contact Info */}
             <div className="space-y-6 text-left w-full max-w-sm backdrop-blur-lg bg-white/5 p-6 rounded-2xl">

@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import web_gradient from "../assets/web_gradient_rev.png";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 const eventsData = [
@@ -52,6 +52,8 @@ const Events = () => {
     }, 400); // match animation duration
   };
 
+  //4 
+
   // Navigate next with flip right animation
   const nextCard = () => {
     setFlipDirection("right");
@@ -71,25 +73,25 @@ const Events = () => {
       style={{ backgroundImage: `url(${web_gradient})` }}
     >
       {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/10" />
       {/* Enhanced Heading Section */}
-          <div className="text-center m-20 z-5">
-            <h1 className="text-6xl font-bold text-white mb-4">
-              Our Events
-            </h1>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-              <span className="text-white/90 text-lg font-light">From Ideas to Impact</span>
-              <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            </div>
-          </div>
+      <div className="text-center m-20 z-5">
+        <h1 className="text-6xl font-bold text-white mb-4">
+          Our Events
+        </h1>
+        <div className="flex items-center justify-center gap-4">
+          <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+          <span className="text-white/90 text-lg font-light">From Ideas to Impact</span>
+          <div className="h-[2px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+        </div>
+      </div>
 
-      <div className="text-centre mb-20 flex flex-col items-center justify-center select-none ">
+      <div className=" text-centre mb-20 flex  items-center justify-center select-none ">
         {/* Left Arrow */}
         <button
           onClick={prevCard}
           aria-label="Previous Event"
-          className="absolute left-2 sm:left-4  sm:top-1/2  text-white text-4xl cursor-pointer select-none
+          className="absolute left-2 sm:left-20  sm:top-1/2  text-white text-4xl cursor-pointer select-none
             hover:text-blue-400 transition-colors z-50 pl-10"
           type="button"
         >
@@ -100,7 +102,7 @@ const Events = () => {
         <button
           onClick={nextCard}
           aria-label="Next Event"
-          className="absolute right-2 sm:right-4 sm:top-1/2 text-white text-4xl cursor-pointer select-none
+          className="absolute right-2 sm:right-20 sm:top-1/2 text-white text-4xl cursor-pointer select-none
             hover:text-blue-400 transition-colors z-50 pr-10"
           type="button"
         >
@@ -108,6 +110,7 @@ const Events = () => {
         </button>
 
         {/* Card */}
+        
         <div
           key={activeIndex}
           className={`group w-[40%] sm:w-[180px] md:w-[240px] lg:w-[280px] h-auto sm:h-[340px] md:h-[380px] lg:min-h-[380px] relative rounded-2xl shadow-[1px_7px_28px_-12px_rgba(0,0,0,0.75)]

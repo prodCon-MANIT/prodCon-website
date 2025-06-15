@@ -55,7 +55,7 @@ export default function smallNavBar() {
       onClick: () => {
         navigate("/");
         closeMenu();
-        scroll.scrollToTop({ duration: 500 });
+        scroll.scrollToTop({ duration: 1000 });
       }
     },
     {
@@ -78,11 +78,11 @@ export default function smallNavBar() {
         navigate("/");
         setTimeout(() => {
           scroller.scrollTo("team-section", {
-            duration: 1300,
+            duration: 1800,
             smooth: "easeInOutQuart",
             offset: -60,
           });
-        }, 100);
+        }, 50);
         closeMenu();
       }
     },
