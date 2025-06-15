@@ -17,7 +17,7 @@ const AccordionItem = ({ question, answer }) => {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full flex items-center justify-between p-6 text-left transition-colors duration-300 ${
+        className={`w-full flex items-center justify-between p-5 transition-colors duration-300 ${
           isOpen ? 'bg-indigo-50' : 'hover:bg-gray-50'
         }`}
       >
@@ -85,7 +85,7 @@ export default function FAQ() {
         backgroundPosition: 'center'
       }}
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-white mb-2 text-center">
           Frequently Asked Questions
         </h2>

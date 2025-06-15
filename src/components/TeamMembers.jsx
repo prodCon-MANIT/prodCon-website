@@ -33,7 +33,7 @@ function TeamMembers() {
       email: "mailto:example@email.com"
     },
     {
-      name: "Vanshita S.",
+      name: "S.",
       position: "Co-Coordinator (Finance)",
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com",
@@ -62,12 +62,12 @@ function TeamMembers() {
         style={{ backgroundImage: `url(${web_gradient})` }}
       >
         {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/20" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="relative z-10 container mx-auto px-20 py-20">
           {/* Enhanced Heading Section */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-10">
             <h1 className="text-6xl font-bold text-white mb-4">
               Our Team
             </h1>
@@ -83,8 +83,8 @@ function TeamMembers() {
               <div key={index} className="flex flex-col items-center group">
                 {/* Enhanced Circular Background */}
                 <div className="w-48 h-48 rounded-full bg-gradient-to-b from-gray-800 to-gray-900 flex items-center justify-center mb-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute inset-0 border-2 border-white/20 rounded-full"></div>
+                  <div className=" inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 border-2 border-white/40 rounded-full"></div>
                   <span className="text-5xl font-bold text-white group-hover:scale-110 transition-transform duration-300">
                     {member.name.charAt(0)}
                   </span>
@@ -104,7 +104,7 @@ function TeamMembers() {
                     href={member.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transform hover:scale-110 transition-all duration-300"
+                    className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
                   >
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   </a>
