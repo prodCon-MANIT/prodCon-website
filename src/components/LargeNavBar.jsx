@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
-import fullLogo from "../assets/ProdCon_fullLogo.svg";
+import fullLogo from "../assets/artboard@4x.png";
 
 export default function LargeNavBar() {
   const navigate = useNavigate();
