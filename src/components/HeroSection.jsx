@@ -53,7 +53,7 @@ function HeroSection() {
         transition={{ duration: 0.8 }}
         className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-0 items-center"
       >
-        <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">
+        <h2 className="text-4xl sm:text-3xl lg:text-5xl font-semibold mb-4">
           𝐰𝐞 𝐚𝐫𝐞,
         </h2>
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-2">
@@ -105,7 +105,7 @@ function HeroSection() {
             where <span className="text-purple-300 font-medium">ideas meet industry</span>.
             We bridge academic knowledge with real‐world consulting and product management skills.
             Our initiatives include <strong>case studies</strong>, <strong>guesstimates</strong>, and <strong>mock interviews</strong>.
-            Flagship events like <strong>VIVITSA</strong> foster strategic thinking and business insight.
+            Flagship events like  foster strategic thinking and business insight.
             Join us to shape your <span className="text-indigo-300 font-medium">journey from campus to corporate</span>.
           </p>
 

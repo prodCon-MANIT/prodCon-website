@@ -71,7 +71,7 @@ const Events = () => {
       className="w-full mx-auto bg-cover bg-center relative flex flex-col items-center justify-center select-none"
       style={{ backgroundImage: `url(${web_gradient})` }}
     >
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/20" />
       <div className="text-center m-20 z-10">
         <h1 className="text-6xl font-bold text-white mb-4">Our Events</h1>
         <div className="flex items-center justify-center gap-4">
