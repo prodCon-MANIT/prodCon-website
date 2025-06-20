@@ -171,17 +171,17 @@ export default function smallNavBar() {
               exit="hidden"
               variants={{ visible: { transition: { staggerChildren: 0.15, delayChildren: 0.6 } } }}
             >
-              {[FaLinkedin, FaGithub, FaDiscord, FaInstagram, FaYoutube].map((Icon, idx) => (
+              {[FaLinkedin, FaInstagram, FaYoutube].map((Icon, idx) => (
                 <motion.button
                   key={idx}
                   onClick={() => window.open(
-                    ['https://linkedin.com','https://github.com','https://discord.com','https://instagram.com','https://youtube.com'][idx], '_blank')
+                    ['https://www.linkedin.com/company/prodcon-the-product-consulting-club-manit-bhopal%C2%A0-nit-b/posts/?feedView=all','https://www.instagram.com/prodcon.manit/','https://youtube.com'][idx], '_blank')
                   }
                   variants={itemVariants}
                   whileHover={{ scale: 1.1 }}
                   className="focus:outline-none"
                 >
-                  <Icon size={20} />
+                  <Icon size={30} />
                 </motion.button>
               ))}
             </motion.div>
