@@ -23,7 +23,7 @@ const itemVariants = {
 };
 
 export default function TeamMembers() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [filter, setFilter] = useState('All');
 
   const members = [
@@ -67,7 +67,7 @@ export default function TeamMembers() {
         style={{ backgroundImage: `url(${web_gradient})` }}
       >
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/111" />
 
         <div className="relative z-10 container mx-auto px-6 py-20">
           {/* Heading */}
@@ -87,33 +87,13 @@ export default function TeamMembers() {
           </motion.div>
 
           {/* Filters */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={visible ? { opacity: 1 } : {}}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-4 mb-16"
-          >
-            {depts.map(d => (
-              <button
-                key={d}
-                onClick={() => setFilter(d)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition ${
-                  filter === d
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}
-              >
-                {d}
-              </button>
-            ))}
-          </motion.div>
-
+         
           {/* Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={visible ? 'visible' : 'hidden'}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10    "
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 "
           >
             {list.map((m) => (
               <motion.div key={m.name + m.position} variants={itemVariants}  className="relative group">
@@ -141,9 +121,7 @@ export default function TeamMembers() {
 
                   {/* Social icons */}
                   <div className="flex justify-center gap-4 mt-10 opacity-100 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                    <a href={m.social.instagram} className="w-4 sm:w-9 mt-6 h-4 sm:h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-pink-500/50  transition-all duration-300">
-                      <FontAwesomeIcon icon={['fab', 'instagram']} />
-                    </a>
+                   
                     <a href={m.social.email} className="w-4 sm:w-9 mt-6 h-4 sm:h-9  rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-red-500/50  transition-all duration-300">
                       <FontAwesomeIcon icon={faEnvelope} />
                     </a>
