@@ -1,7 +1,7 @@
 import React from 'react';
 import web_gradient from '../assets/web_gradient_rev.png';
-import iitBombayImg from '../assets/iit_bombay.jpg';
-import iimCalcuttaImg from '../assets/iim_calcutta.jpg';
+import iitBombayImg from '../assets/iit_bombay.png';
+import iimCalcuttaImg from '../assets/iim_calcutta.png';
 import mastersUnionImg from '../assets/masters_union.png';
 
 export default function Achievements() {
@@ -23,8 +23,8 @@ export default function Achievements() {
         </div>
         <div className="space-y-12 w-full">
           {/* Card 1: Top National & International Recognition */}
-          <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden">
-            <img src={iitBombayImg} alt="IIT Bombay" className="w-full md:w-1/3 h-48 object-cover" />
+          <div className="flex flex-col md:flex-row items-center bg-white/30 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg overflow-hidden">
+            <img src={iitBombayImg} alt="IIT Bombay" className="w-32 h-32 m-4 rounded-xl object-contain" />
             <div className="p-8 flex-1">
               <h3 className="text-xl font-semibold text-purple-800 mb-4 border-b border-purple-300 pb-1">Top National & International Recognition</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-800">
@@ -35,22 +35,20 @@ export default function Achievements() {
             </div>
           </div>
           {/* Card 2: Case & B-Plan Competitions (zigzag) */}
-          <div className="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden">
-            <img src={iimCalcuttaImg} alt="IIM Calcutta" className="w-full md:w-1/3 h-48 object-cover" />
+          <div className="flex flex-col md:flex-row-reverse items-center bg-white/30 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg overflow-hidden">
+            <img src={iimCalcuttaImg} alt="IIM Calcutta" className="w-32 h-32 m-4 rounded-xl object-contain" />
             <div className="p-8 flex-1">
               <h3 className="text-xl font-semibold text-purple-800 mb-4 border-b border-purple-300 pb-1">Case & B-Plan Competitions</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-800">
                 <li>National Finalist – Pitch Perfect, IIT Bombay (Top 10 out of 1000+)</li>
                 <li>Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)</li>
-                <li>Top 10 – Pitch Perfect, FMS Delhi (900+ submissions)</li>
-                <li>Top 12 – Fetching Fortunes, E-Cell IIT Hyderabad (1,500+ startups)</li>
                 <li>Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)</li>
               </ul>
             </div>
           </div>
           {/* Card 3: Industry Innovation Competitions */}
-          <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden">
-            <img src={mastersUnionImg} alt="Masters' Union" className="w-full md:w-1/3 h-48 object-cover" />
+          <div className="flex flex-col md:flex-row items-center bg-white/30 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg overflow-hidden">
+            <img src={mastersUnionImg} alt="Masters' Union" className="w-32 h-32 m-4 rounded-xl object-contain" />
             <div className="p-8 flex-1">
               <h3 className="text-xl font-semibold text-purple-800 mb-4 border-b border-purple-300 pb-1">Industry Innovation Competitions</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-800">
