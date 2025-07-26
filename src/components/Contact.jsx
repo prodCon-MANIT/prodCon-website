@@ -117,7 +117,7 @@ function Contact() {
         >
           <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center px-4">
             <h2 className="text-5xl font-bold text-[#D99343] mb-4">Location</h2>
-            <p className=" font-medium mb-2 font-bold text-xl sm:text-5xl">Maulana Azad National Institute of Technology</p>
+            <p className=" font-medium mb-2 sm:font-bold text-xl sm:text-5xl">Maulana Azad National Institute of Technology</p>
             <p className="text-md max-w-xl">
               <FontAwesomeIcon icon={faLocationDot} className="mr-2 text-white" />
 
