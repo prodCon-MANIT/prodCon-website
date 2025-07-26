@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+
 import web_gradient from "../assets/web_gradient_rev.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

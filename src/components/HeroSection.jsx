@@ -81,7 +81,7 @@ function HeroSection() {
       {/* Right Section */}
       <motion.section
         initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: .8, x: 0 }}   
+        animate={{ opacity: .8, x: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
         className="relative  z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center px-6 sm:px-8 lg:px-12 py-12 lg:py-0"
       >
