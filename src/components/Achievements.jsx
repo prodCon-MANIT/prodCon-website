@@ -8,7 +8,7 @@ const cardBase = `relative flex flex-col md:flex-row items-center bg-white/70 ba
 const cardBorder = `border-2 border-transparent bg-clip-padding bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-pink-200/60`;
 const cardOverlay = `before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/40 before:to-white/10 before:pointer-events-none before:rounded-2xl`;
 const cardAnim = `animate-fadein`;
-const imgClass = `w-28 h-28 m-6 rounded-full border-4 border-white shadow-lg object-cover bg-white/80`;
+const imgClass = `w-28 h-28 m-4 rounded-full object-cover bg-white/80`;
 
 export default function Achievements() {
   return (
@@ -19,12 +19,12 @@ export default function Achievements() {
     >
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative z-10 w-full max-w-4xl px-6 py-20 flex flex-col items-center justify-center">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 text-center tracking-tight font-sans drop-shadow-lg">
+        <h2 className="text-4xl md:text-6xl text-white mb-6 text-center  font-bold drop-shadow-lg">
           Our Achievements
         </h2>
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-          <span className="text-white/90 text-lg font-light">From Ideas to Impact</span>
+          <span className="text-white/90 text-lg font-light">Highlights</span>
           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
         <div className="space-y-14 w-full">
@@ -32,8 +32,8 @@ export default function Achievements() {
           <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim}`} style={{animationDelay: '0.1s', animationFillMode: 'backwards'}}>
             <img src={iitBombayImg} alt="IIT Bombay" className={imgClass} />
             <div className="p-8 flex-1">
-              <h3 className="text-2xl font-bold text-black mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Top National & International Recognition</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-800 text-lg">
+              <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Top National & International Recognition</h3>
+              <ul className="list-disc list-inside space-y-2 text-lg">
                 <li>Won the International Cenex Award – IIT Bombay</li>
                 <li>Top 3 Teams – The Boardroom Marketing Competition, IIM Calcutta</li>
                 <li>Finalist – Techniche, IIT Guwahati (Northeast India’s largest tech fest)</li>
@@ -44,8 +44,8 @@ export default function Achievements() {
           <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim} md:flex-row-reverse`} style={{animationDelay: '0.3s', animationFillMode: 'backwards'}}>
             <img src={iimCalcuttaImg} alt="IIM Calcutta" className={imgClass} />
             <div className="p-8 flex-1">
-              <h3 className="text-2xl font-bold text-black mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Case & B-Plan Competitions</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-800 text-lg">
+              <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Case & B-Plan Competitions</h3>
+              <ul className="list-disc list-inside space-y-2 text-lg">
                 <li>National Finalist – Pitch Perfect, IIT Bombay (Top 10 out of 1000+)</li>
                 <li>Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)</li>
                 <li>Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)</li>
@@ -56,10 +56,10 @@ export default function Achievements() {
           <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim}`} style={{animationDelay: '0.5s', animationFillMode: 'backwards'}}>
             <img src={mastersUnionImg} alt="Masters' Union" className={imgClass} />
             <div className="p-8 flex-1">
-              <h3 className="text-2xl font-bold text-black mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Industry Innovation Competitions</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-800 text-lg">
+              <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Industry Innovation Competitions</h3>
+              <ul className="list-disc list-inside space-y-2 text-lg">
                 <li>Winner – AI Electrify Challenge, Masters' Union</li>
-                <li className="pl-6 text-base text-gray-800">Led national AI project on India's $7B EV market</li>
+                <li>Led national AI project on India's $7B EV market</li>
               </ul>
             </div>
           </div>
