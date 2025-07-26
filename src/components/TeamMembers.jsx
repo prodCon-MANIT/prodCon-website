@@ -27,21 +27,22 @@ export default function TeamMembers() {
   const [filter, setFilter] = useState('All');
 
   const members = [
-    { name: 'John Doe', position: 'Coordinator (Admin)', department: 'Leadership', social: { instagram: '#', email: 'mailto:john@example.com', linkedin: '#' } },
-    { name: 'Jane Smith', position: 'Coordinator (Finance)', department: 'Leadership', social: { instagram: '#', email: 'mailto:jane@example.com', linkedin: '#' } },
-    { name: 'Alex Johnson', position: 'Co-Coordinator (Admin)', department: 'Leadership', social: { instagram: '#', email: 'mailto:alex@example.com', linkedin: '#' } },
-    { name: 'Sam Wilson', position: 'Co-Coordinator (Finance)', department: 'Leadership', social: { instagram: '#', email: 'mailto:sam@example.com', linkedin: '#' } },
-    { name: 'Taylor Swift', position: 'Technical Head', department: 'Technical', social: { instagram: '#', email: 'mailto:taylor@example.com', linkedin: '#' } },
-    { name: 'Chris Evans', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:chris@example.com', linkedin: '#' } },
-    { name: 'Natasha Lee', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:natasha@example.com', linkedin: '#' } },
-    { name: 'Bruce Wayne', position: 'Design Head', department: 'Creative', social: { instagram: '#', email: 'mailto:bruce@example.com', linkedin: '#' } },
-
-    { name: 'Taylor Swift', position: 'Technical Head', department: 'Technical', social: { instagram: '#', email: 'mailto:taylor@example.com', linkedin: '#' } },
-    { name: 'Chris Evans', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:chris@example.com', linkedin: '#' } },
-    { name: 'Natasha Lee', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:natasha@example.com', linkedin: '#' } },
-    { name: 'Chris Evans', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:chris@example.com', linkedin: '#' } },
-    { name: 'Natasha Lee', position: 'Marketing Head', department: 'Marketing', social: { instagram: '#', email: 'mailto:natasha@example.com', linkedin: '#' } },
-    
+    { name: 'Kushagra Tiwari', position: 'Co-founder & President', department: 'Leadership', social: { instagram: '#', email: 'mailto:kushagra@example.com', linkedin: '#' } },
+    { name: 'Gautam Kumar', position: 'Co-founder & VP', department: 'Leadership', social: { instagram: '#', email: 'mailto:gautam@example.com', linkedin: '#' } },
+    { name: 'Ankita Tyagi', position: 'General Secretary', department: 'Leadership', social: { instagram: '#', email: 'mailto:ankita@example.com', linkedin: '#' } },
+    { name: 'Saksham Gulyani', position: 'Head of Product', department: 'Product', social: { instagram: '#', email: 'mailto:saksham@example.com', linkedin: '#' } },
+    { name: 'Tanishq Sharda', position: 'Head of Consulting', department: 'Consulting', social: { instagram: '#', email: 'mailto:tanishq@example.com', linkedin: '#' } },
+   
+    { name: 'Smriti Srivastava', position: 'Treasurer', department: 'Finance', social: { instagram: '#', email: 'mailto:smriti@example.com', linkedin: '#' } },
+   
+    { name: 'Rahul Hazra', position: 'Video Editing Head', department: 'Creative', social: { instagram: '#', email: 'mailto:rahul@example.com', linkedin: '#' } },
+    { name: 'Priyansh Kashyap', position: 'Designing Head', department: 'Creative', social: { instagram: '#', email: 'mailto:priyansh@example.com', linkedin: '#' } },
+    { name: 'Ankit Kumar', position: 'Technical Head', department: 'Technical', social: { instagram: '#', email: 'mailto:ankit@example.com', linkedin: '#' } },
+    { name: 'Aditya Raj Mantri', position: 'Overall Coordinator', department: 'Leadership', social: { instagram: '#', email: 'mailto:aditya@example.com', linkedin: '#' } },
+    { name: 'Shayan', position: 'Sponsorship Secretary', department: 'Sponsorship', social: { instagram: '#', email: 'mailto:shayan@example.com', linkedin: '#' } },
+    { name: 'Swati Hansda', position: 'Research & Content Head (Product)', department: 'Product', social: { instagram: '#', email: 'mailto:swati@example.com', linkedin: '#' } },
+    { name: 'Yash', position: 'Research & Content Head (Consulting)', department: 'Consulting', social: { instagram: '#', email: 'mailto:yash@example.com', linkedin: '#' } },
+    { name: 'Somil Prajapati', position: 'Logistics & Ops Secretary', department: 'Operations', social: { instagram: '#', email: 'mailto:somil@example.com', linkedin: '#' } },
   ];
 
   const depts = ['All', ...new Set(members.map(m => m.department))];

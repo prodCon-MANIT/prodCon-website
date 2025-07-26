@@ -15,30 +15,7 @@ const eventsData = [
     // registerLink: "https://www.google.co.in/",
     gradient: "from-purple-500/50 to-green-300",
   },
-  // {
-  //   title: "Event",
-  //   image: "https://dummyimage.com/1080x1080/392359/ffffff&text=350x350",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam voluptatum tempora molestiae quod ducimus dolorum eligendi mollitia totam ipsa?",
-  //   registerLink: "https://www.google.co.in/",
-  //   gradient: "from-red-600/50 to-yellow-300",
-  // },
-  // {
-  //   title: "Event",
-  //   image: "https://dummyimage.com/1080x1080/392359/ffffff&text=350x350",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam voluptatum tempora molestiae quod ducimus dolorum eligendi mollitia totam ipsa?",
-  //   registerLink: "https://www.google.co.in/",
-  //   gradient: "from-indigo-500/50 to-pink-300",
-  // },
-  // {
-  //   title: "Event",
-  //   image: "https://dummyimage.com/1080x1080/392359/ffffff&text=350x350",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam voluptatum tempora molestiae quod ducimus dolorum eligendi mollitia totam ipsa?",
-  //   registerLink: "https://www.google.co.in/",
-  //   gradient: "from-purple-500/50 to-yellow-200",
-  // },
+  
 ];
 
 const Events = () => {

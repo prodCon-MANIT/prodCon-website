@@ -4,6 +4,8 @@ import TeamMembers from './TeamMembers'
 import HeroSection from './HeroSection'
 import Footer from './Footer'
 import FAQ from './FAQ'
+import Achievements from './Achievements';
+
 
 function Home() {
   return (
@@ -11,6 +13,7 @@ function Home() {
        <HeroSection />
        <Events />
        <TeamMembers />
+       <Achievements/>
        <FAQ />
        <Footer />
     </div>
