@@ -7,6 +7,21 @@ import { fab, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { motion } from 'framer-motion';
 
+// Import team member images
+import adityaRajMantriImg from '../assets/aditya_raj_mantri.jpg';
+import yashSharmaImg from '../assets/yash_sharma.jpg';
+import somilPrajapatiImg from '../assets/somil_prajapati.jpg';
+import shayanFahimiImg from '../assets/shayan_fahimi.jpg';
+import smritiShrivastavaImg from '../assets/smriti_shrivastava.jpg';
+import ankitKumarYadavImg from '../assets/ankit_kumar_yadav.jpg';
+import rahulHazraImg from '../assets/rahul_hazra.jpg';
+import tanishqSardaImg from '../assets/tanishq_sarda.jpg';
+import priyanshKashyapImg from '../assets/priyansh_kashyap.jpg';
+import gautamKumarImg from '../assets/gautam.jpeg';
+import kushagraTiwariImg from '../assets/kushagra.jpeg';
+import sakshamGuliyaniImg from '../assets/saksham_guliyani.jpg';
+import swatiHansdaImg from '../assets/SWATIP - Swati Hansda.jpg';
+
 // Initialize FontAwesome library
 library.add(fab, faLinkedin, faInstagram, faEnvelope);
 
@@ -27,22 +42,150 @@ export default function TeamMembers() {
   const [filter, setFilter] = useState('All');
 
   const members = [
-    { name: 'Kushagra Tiwari', position: 'Co-founder & President', department: 'Leadership', social: { instagram: '#', email: 'mailto:kushagra@example.com', linkedin: '#' } },
-    { name: 'Gautam Kumar', position: 'Co-founder & VP', department: 'Leadership', social: { instagram: '#', email: 'mailto:gautam@example.com', linkedin: '#' } },
-    { name: 'Ankita Tyagi', position: 'General Secretary', department: 'Leadership', social: { instagram: '#', email: 'mailto:ankita@example.com', linkedin: '#' } },
-    { name: 'Saksham Gulyani', position: 'Head of Product', department: 'Product', social: { instagram: '#', email: 'mailto:saksham@example.com', linkedin: '#' } },
-    { name: 'Tanishq Sharda', position: 'Head of Consulting', department: 'Consulting', social: { instagram: '#', email: 'mailto:tanishq@example.com', linkedin: '#' } },
-   
-    { name: 'Smriti Srivastava', position: 'Treasurer', department: 'Finance', social: { instagram: '#', email: 'mailto:smriti@example.com', linkedin: '#' } },
-   
-    { name: 'Rahul Hazra', position: 'Video Editing Head', department: 'Creative', social: { instagram: '#', email: 'mailto:rahul@example.com', linkedin: '#' } },
-    { name: 'Priyansh Kashyap', position: 'Designing Head', department: 'Creative', social: { instagram: '#', email: 'mailto:priyansh@example.com', linkedin: '#' } },
-    { name: 'Ankit Kumar', position: 'Technical Head', department: 'Technical', social: { instagram: '#', email: 'mailto:ankit@example.com', linkedin: '#' } },
-    { name: 'Aditya Raj Mantri', position: 'Overall Coordinator', department: 'Leadership', social: { instagram: '#', email: 'mailto:aditya@example.com', linkedin: '#' } },
-    { name: 'Shayan', position: 'Sponsorship Secretary', department: 'Sponsorship', social: { instagram: '#', email: 'mailto:shayan@example.com', linkedin: '#' } },
-    { name: 'Swati Hansda', position: 'Research & Content Head (Product)', department: 'Product', social: { instagram: '#', email: 'mailto:swati@example.com', linkedin: '#' } },
-    { name: 'Yash', position: 'Research & Content Head (Consulting)', department: 'Consulting', social: { instagram: '#', email: 'mailto:yash@example.com', linkedin: '#' } },
-    { name: 'Somil Prajapati', position: 'Logistics & Ops Secretary', department: 'Operations', social: { instagram: '#', email: 'mailto:somil@example.com', linkedin: '#' } },
+    
+    { 
+      name: 'Gautam Kumar', 
+      position: 'Co-founder & VP', 
+      department: 'Leadership', 
+      image: gautamKumarImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:gautam@example.com', 
+        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
+      } 
+    },
+    { 
+      name: 'Kushagra Tiwari', 
+      position: 'Co-founder & President', 
+      department: 'Leadership', 
+      image: kushagraTiwariImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:kushagra@example.com', 
+        linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/' 
+      } 
+    },
+    { 
+      name: 'Saksham Guliyani', 
+      position: 'Head of Product', 
+      department: 'Product', 
+      image: sakshamGuliyaniImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:saksham@example.com', 
+        linkedin: 'https://www.linkedin.com/in/guliyanisaksham' 
+      } 
+    },
+    { 
+      name: 'Swati Hansda', 
+      position: 'Research & Content Head (Product)', 
+      department: 'Product', 
+      image: swatiHansdaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:swati@example.com', 
+        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
+      } 
+    },
+    { 
+      name: 'Aditya Raj Mantri', 
+      position: 'Overall Coordinator', 
+      department: 'Leadership', 
+      image: adityaRajMantriImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:aditya@example.com', 
+        linkedin: 'https://www.linkedin.com/in/aditya-raj-mantri-868013267' 
+      } 
+    },
+    { 
+      name: 'Yash Sharma', 
+      position: 'Research & Content Head (Consulting)', 
+      department: 'Consulting', 
+      image: yashSharmaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:yash@example.com', 
+        linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' 
+      } 
+    },
+    { 
+      name: 'Somil Prajapati', 
+      position: 'Logistics & Ops Secretary', 
+      department: 'Operations', 
+      image: somilPrajapatiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:somil@example.com', 
+        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
+      } 
+    },
+    { 
+      name: 'Shayan Fahimi', 
+      position: 'Sponsorship Secretary', 
+      department: 'Sponsorship', 
+      image: shayanFahimiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:shayan@example.com', 
+        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
+      } 
+    },
+    { 
+      name: 'Smriti Shrivastava', 
+      position: 'Treasurer', 
+      department: 'Finance', 
+      image: smritiShrivastavaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:smriti@example.com', 
+        linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
+      } 
+    },
+    { 
+      name: 'Ankit Kumar Yadav', 
+      position: 'Technical Head', 
+      department: 'Technical', 
+      image: ankitKumarYadavImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:ankit@example.com', 
+        linkedin: 'https://www.linkedin.com/in/ankit-kumar-1065b3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
+      } 
+    },
+    { 
+      name: 'Rahul Hazra', 
+      position: 'Video Editing Head', 
+      department: 'Creative', 
+      image: rahulHazraImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:rahul@example.com', 
+        linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b' 
+      } 
+    },
+    { 
+      name: 'Tanishq Sarda', 
+      position: 'Head of Consulting', 
+      department: 'Consulting', 
+      image: tanishqSardaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:tanishq@example.com', 
+        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
+      } 
+    },
+    { 
+      name: 'Priyansh Kashyap', 
+      position: 'Designing Head', 
+      department: 'Creative', 
+      image: priyanshKashyapImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:priyansh@example.com', 
+        linkedin: 'https://www.linkedin.com/in/priyansh-kashyap-9bbbb5259' 
+      } 
+    },
   ];
 
   const depts = ['All', ...new Set(members.map(m => m.department))];
@@ -102,9 +245,18 @@ export default function TeamMembers() {
                   {/* Avatar */}
                   <div className="relative mb-1">
                     <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg overflow-hidden">
-                     <img></img>
+                      {m.image ? (
+                        <img 
+                          src={m.image} 
+                          alt={m.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-white text-2xl font-bold">
+                          {m.name.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      )}
                     </div>
-                    
                   </div>
 
                   {/* Info */}
@@ -115,9 +267,6 @@ export default function TeamMembers() {
                     <div className="absolute left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-100 group-hover:opacity-100 transition-opacity duration-300">
                       {m.position.split('(')[0].trim()}
                     </div>
-                   
-                  
-             
                   </div>
 
                   {/* Social icons */}
