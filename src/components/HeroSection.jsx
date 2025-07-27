@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import web_gradient from "../assets/web_gradient.png";
 import BlockInTextCard from "./BlockInTextCard";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 function HeroSection() {
   const useTypewriter = (text, speed = 150, pause = 2000) => {
