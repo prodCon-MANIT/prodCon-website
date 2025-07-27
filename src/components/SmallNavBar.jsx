@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { FaLinkedin, FaGithub, FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 // Hook to get window size (only small screens matter here)
 function useWindowSize() {
@@ -232,7 +232,7 @@ export default function smallNavBar() {
 // import { animateScroll as scroll, scroller } from "react-scroll";
 // import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 // import { FaLinkedin, FaGithub, FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
-// import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "motion/react";
 
 // // Hook to get window size (only small screens matter here)
 // function useWindowSize() {

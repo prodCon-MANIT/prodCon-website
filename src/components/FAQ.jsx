@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { HiChevronDown } from "react-icons/hi";
 import web_gradient_rev from '../assets/web_gradient_rev.png'
 

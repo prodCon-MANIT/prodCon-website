@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // Import team member images
 import adityaRajMantriImg from '../assets/aditya_raj_mantri.jpg';
