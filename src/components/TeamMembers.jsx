@@ -237,22 +237,22 @@ export default function TeamMembers() {
             variants={containerVariants}
             initial="hidden"
             animate={visible ? 'visible' : 'hidden'}
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 lg:gap-10"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 "
           >
             {list.map((m) => (
               <motion.div key={m.name + m.position} variants={itemVariants}  className="relative group">
-                <div className="p-4 sm:p-6 bg-white/20 backdrop-blur-md rounded-2xl shadow-2xl border border-white/30 transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/50 group-hover:bg-white/30">
+                <div className="p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-xl border border-white/10 backdrop-blur-sm transition-transform transform group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/20">
                   {/* Avatar */}
-                  <div className="relative mb-3 sm:mb-4">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center shadow-xl overflow-hidden border-2 sm:border-4 border-white/50 group-hover:border-white/80 transition-all duration-300">
+                  <div className="relative mb-1">
+                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg overflow-hidden">
                       {m.image ? (
                         <img 
                           src={m.image} 
                           alt={m.name}
-                          className="w-full h-full object-cover rounded-full"
+                          className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-white text-xl sm:text-2xl md:text-3xl font-bold">
+                        <div className="w-full h-full flex items-center justify-center text-white text-2xl font-bold">
                           {m.name.split(' ').map(n => n[0]).join('')}
                         </div>
                       )}
@@ -261,21 +261,21 @@ export default function TeamMembers() {
 
                   {/* Info */}
                   <div className="text-center">
-                    <h3 className="text-sm sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-300">
+                    <h3 className=" text-sm sm:text-xl font-semibold text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-300">
                       {m.name}
                     </h3>
-                    <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-xs font-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full shadow-lg border border-white/20 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-100 group-hover:opacity-100 transition-opacity duration-300">
                       {m.position.split('(')[0].trim()}
                     </div>
                   </div>
 
                   {/* Social icons */}
-                  <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mt-4 sm:mt-6 opacity-80 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div className="flex justify-center gap-4 mt-10 opacity-100 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                    
-                    <a href={m.social.email} className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-red-500/50 hover:scale-110 transition-all duration-300 shadow-lg">
+                    <a href={m.social.email} className="w-4 sm:w-9 mt-6 h-4 sm:h-9  rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-red-500/50  transition-all duration-300">
                       <FontAwesomeIcon icon={faEnvelope} />
                     </a>
-                    <a href={m.social.linkedin} className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-blue-500/50 hover:scale-110 transition-all duration-300 shadow-lg">
+                    <a href={m.social.linkedin} className="w-4 sm:w-9 mt-6 h-4 sm:h-9  rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-blue-500/50 transition-all duration-300">
                       <FontAwesomeIcon icon={['fab', 'linkedin']} />
                     </a>
                   </div>
