@@ -42,18 +42,6 @@ export default function TeamMembers() {
   const [filter, setFilter] = useState('All');
 
   const members = [
-    
-    { 
-      name: 'Gautam Kumar', 
-      position: 'Co-founder & VP', 
-      department: 'Leadership', 
-      image: gautamKumarImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:gautam@example.com', 
-        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
-      } 
-    },
     { 
       name: 'Kushagra Tiwari', 
       position: 'Co-founder & President', 
@@ -63,6 +51,17 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:kushagra@example.com', 
         linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/' 
+      } 
+    },
+    { 
+      name: 'Gautam Kumar', 
+      position: 'Co-founder & VP', 
+      department: 'Leadership', 
+      image: gautamKumarImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:gautam@example.com', 
+        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
       } 
     },
     { 
@@ -77,14 +76,14 @@ export default function TeamMembers() {
       } 
     },
     { 
-      name: 'Swati Hansda', 
-      position: 'Research & Content Head (Product)', 
-      department: 'Product', 
-      image: swatiHansdaImg,
+      name: 'Tanishq Sarda', 
+      position: 'Head of Consulting', 
+      department: 'Consulting', 
+      image: tanishqSardaImg,
       social: { 
         instagram: '#', 
-        email: 'mailto:swati@example.com', 
-        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
+        email: 'mailto:tanishq@example.com', 
+        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
       } 
     },
     { 
@@ -99,6 +98,17 @@ export default function TeamMembers() {
       } 
     },
     { 
+      name: 'Swati Hansda', 
+      position: 'Research & Content Head (Product)', 
+      department: 'Product', 
+      image: swatiHansdaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:swati@example.com', 
+        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
+      } 
+    },
+    { 
       name: 'Yash Sharma', 
       position: 'Research & Content Head (Consulting)', 
       department: 'Consulting', 
@@ -107,28 +117,6 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:yash@example.com', 
         linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' 
-      } 
-    },
-    { 
-      name: 'Somil Prajapati', 
-      position: 'Logistics & Ops Secretary', 
-      department: 'Operations', 
-      image: somilPrajapatiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:somil@example.com', 
-        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
-      } 
-    },
-    { 
-      name: 'Shayan Fahimi', 
-      position: 'Sponsorship Secretary', 
-      department: 'Sponsorship', 
-      image: shayanFahimiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:shayan@example.com', 
-        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
       } 
     },
     { 
@@ -154,6 +142,29 @@ export default function TeamMembers() {
       } 
     },
     { 
+      name: 'Shayan Fahimi', 
+      position: 'Sponsorship Secretary', 
+      department: 'Sponsorship', 
+      image: shayanFahimiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:shayan@example.com', 
+        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
+      } 
+    },
+    { 
+      name: 'Somil Prajapati', 
+      position: 'Logistics & Ops Secretary', 
+      department: 'Operations', 
+      image: somilPrajapatiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:somil@example.com', 
+        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
+      } 
+    },
+    
+    { 
       name: 'Rahul Hazra', 
       position: 'Video Editing Head', 
       department: 'Creative', 
@@ -162,17 +173,6 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:rahul@example.com', 
         linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b' 
-      } 
-    },
-    { 
-      name: 'Tanishq Sarda', 
-      position: 'Head of Consulting', 
-      department: 'Consulting', 
-      image: tanishqSardaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:tanishq@example.com', 
-        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
       } 
     },
     { 
@@ -227,7 +227,7 @@ export default function TeamMembers() {
                 Team
               </span>
             </h2>
-            <p className="mt-2 sm:mt-3 text-gray-300 text-sm sm:text-base lg:text-lg px-4">The brilliant minds behind our success</p>
+            <p className="mt-2 sm:mt-3 text-gray-300 text-sm sm:text-base lg:text-lg px-4">The brilliant minds behind Prodcon</p>
           </motion.div>
 
           {/* Filters */}
