@@ -51,7 +51,7 @@ const settings = {
       style={{ backgroundImage: `url(${web_gradient})` }}
     >
       <div className="absolute inset-0 bg-black/20" />
-      <div className="text-center m-20 mb-10 z-10">
+      <div className="text-center m-20 mb-5 sm:mb-0 z-10">
         <h1 className="text-6xl font-bold text-white mb-4">Our Events</h1>
         <div className="flex items-center justify-center gap-4">
           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
@@ -66,7 +66,7 @@ const settings = {
             <div key={idx} className="px-3">
               <div className="group relative flex justify-center items-center">
                 <div
-                  className={`group w-[240px] sm:w-[240px] md:w-[280px] lg:w-[300px] h-[400px] relative rounded-2xl 
+                  className={`group w-[240px] sm:w-[240px] md:w-[280px] lg:w-[300px] h-[300px] sm:h-[300px] md:h-[380px] lg:h-[400px] relative rounded-2xl 
                   shadow-[1px_7px_28px_-12px_rgba(0,0,0,0.75)] overflow-hidden 
                   bg-purple-900/30 cursor-pointer transition-transform duration-400 ease-in-out`}
                 >
@@ -76,17 +76,24 @@ const settings = {
                     opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none`}
                   ></div>
 
-                  {/* Image */}
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl z-0"
-                    onError={(e) =>
-                      console.log("Image failed to load, using placeholder") ||
-                      (e.target.src =
-                        "https://dummyimage.com/350x350/000000/392359&text=350x350")
-                    }
-                  />
+                  {/* Image Container */}
+                  <div className="absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden z-0">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-contain sm:object-cover rounded-2xl"
+                      style={{
+                        objectPosition: 'center center',
+                        minHeight: '100%',
+                        minWidth: '100%'
+                      }}
+                      onError={(e) =>
+                        console.log("Image failed to load, using placeholder") ||
+                        (e.target.src =
+                          "https://dummyimage.com/350x350/000000/392359&text=350x350")
+                      }
+                    />
+                  </div>
 
                   {/* Text content - hidden until hover */}
                   <div

@@ -42,18 +42,6 @@ export default function TeamMembers() {
   const [filter, setFilter] = useState('All');
 
   const members = [
-    
-    { 
-      name: 'Gautam Kumar', 
-      position: 'Co-founder & VP', 
-      department: 'Leadership', 
-      image: gautamKumarImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:gautam@example.com', 
-        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
-      } 
-    },
     { 
       name: 'Kushagra Tiwari', 
       position: 'Co-founder & President', 
@@ -63,6 +51,17 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:kushagra@example.com', 
         linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/' 
+      } 
+    },
+    { 
+      name: 'Gautam Kumar', 
+      position: 'Co-founder & VP', 
+      department: 'Leadership', 
+      image: gautamKumarImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:gautam@example.com', 
+        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
       } 
     },
     { 
@@ -77,14 +76,14 @@ export default function TeamMembers() {
       } 
     },
     { 
-      name: 'Swati Hansda', 
-      position: 'Research & Content Head (Product)', 
-      department: 'Product', 
-      image: swatiHansdaImg,
+      name: 'Tanishq Sarda', 
+      position: 'Head of Consulting', 
+      department: 'Consulting', 
+      image: tanishqSardaImg,
       social: { 
         instagram: '#', 
-        email: 'mailto:swati@example.com', 
-        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
+        email: 'mailto:tanishq@example.com', 
+        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
       } 
     },
     { 
@@ -99,6 +98,17 @@ export default function TeamMembers() {
       } 
     },
     { 
+      name: 'Swati Hansda', 
+      position: 'Research & Content Head (Product)', 
+      department: 'Product', 
+      image: swatiHansdaImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:swati@example.com', 
+        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
+      } 
+    },
+    { 
       name: 'Yash Sharma', 
       position: 'Research & Content Head (Consulting)', 
       department: 'Consulting', 
@@ -107,28 +117,6 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:yash@example.com', 
         linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' 
-      } 
-    },
-    { 
-      name: 'Somil Prajapati', 
-      position: 'Logistics & Ops Secretary', 
-      department: 'Operations', 
-      image: somilPrajapatiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:somil@example.com', 
-        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
-      } 
-    },
-    { 
-      name: 'Shayan Fahimi', 
-      position: 'Sponsorship Secretary', 
-      department: 'Sponsorship', 
-      image: shayanFahimiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:shayan@example.com', 
-        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
       } 
     },
     { 
@@ -154,6 +142,29 @@ export default function TeamMembers() {
       } 
     },
     { 
+      name: 'Shayan Fahimi', 
+      position: 'Sponsorship Secretary', 
+      department: 'Sponsorship', 
+      image: shayanFahimiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:shayan@example.com', 
+        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
+      } 
+    },
+    { 
+      name: 'Somil Prajapati', 
+      position: 'Logistics & Ops Secretary', 
+      department: 'Operations', 
+      image: somilPrajapatiImg,
+      social: { 
+        instagram: '#', 
+        email: 'mailto:somil@example.com', 
+        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
+      } 
+    },
+    
+    { 
       name: 'Rahul Hazra', 
       position: 'Video Editing Head', 
       department: 'Creative', 
@@ -162,17 +173,6 @@ export default function TeamMembers() {
         instagram: '#', 
         email: 'mailto:rahul@example.com', 
         linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b' 
-      } 
-    },
-    { 
-      name: 'Tanishq Sarda', 
-      position: 'Head of Consulting', 
-      department: 'Consulting', 
-      image: tanishqSardaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:tanishq@example.com', 
-        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
       } 
     },
     { 
@@ -213,21 +213,21 @@ export default function TeamMembers() {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/111" />
 
-        <div className="relative z-10 container mx-auto px-6 py-20">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={visible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-10 lg:mb-12"
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 px-4">
               Meet Our{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-gradient-x">
                 Team
               </span>
             </h2>
-            <p className="mt-3 text-gray-300 text-lg">The brilliant minds behind our success</p>
+            <p className="mt-2 sm:mt-3 text-gray-300 text-sm sm:text-base lg:text-lg px-4">The brilliant minds behind Prodcon</p>
           </motion.div>
 
           {/* Filters */}
@@ -237,14 +237,14 @@ export default function TeamMembers() {
             variants={containerVariants}
             initial="hidden"
             animate={visible ? 'visible' : 'hidden'}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 "
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-xs sm:max-w-none mx-auto sm:mx-0"
           >
             {list.map((m) => (
-              <motion.div key={m.name + m.position} variants={itemVariants}  className="relative group">
-                <div className="p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-xl border border-white/10 backdrop-blur-sm transition-transform transform group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/20">
+              <motion.div key={m.name + m.position} variants={itemVariants} className="relative group">
+                <div className="p-3 sm:p-4 lg:p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-xl sm:rounded-2xl shadow-xl border border-white/10 backdrop-blur-sm transition-transform transform group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/20 max-w-[280px] sm:max-w-none mx-auto sm:mx-0">
                   {/* Avatar */}
-                  <div className="relative mb-1">
-                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg overflow-hidden">
+                  <div className="relative mb-2 sm:mb-3 lg:mb-4">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg overflow-hidden">
                       {m.image ? (
                         <img 
                           src={m.image} 
@@ -252,7 +252,7 @@ export default function TeamMembers() {
                           className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-white text-2xl font-bold">
+                        <div className="w-full h-full flex items-center justify-center text-white text-lg sm:text-xl md:text-2xl font-bold">
                           {m.name.split(' ').map(n => n[0]).join('')}
                         </div>
                       )}
@@ -261,22 +261,22 @@ export default function TeamMembers() {
 
                   {/* Info */}
                   <div className="text-center">
-                    <h3 className=" text-sm sm:text-xl font-semibold text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-300">
+                    <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-white mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-300 leading-tight">
                       {m.name}
                     </h3>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-100 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-2 sm:px-3 py-1 rounded-full opacity-100 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                       {m.position.split('(')[0].trim()}
                     </div>
                   </div>
 
                   {/* Social icons */}
-                  <div className="flex justify-center gap-4 mt-10 opacity-100 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                  <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 mt-8 sm:mt-8 lg:mt-10 opacity-100 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                    
-                    <a href={m.social.email} className="w-4 sm:w-9 mt-6 h-4 sm:h-9  rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-red-500/50  transition-all duration-300">
-                      <FontAwesomeIcon icon={faEnvelope} />
+                    <a href={m.social.email} className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-red-500/50 transition-all duration-300">
+                      <FontAwesomeIcon icon={faEnvelope} className="text-xs sm:text-sm" />
                     </a>
-                    <a href={m.social.linkedin} className="w-4 sm:w-9 mt-6 h-4 sm:h-9  rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-blue-500/50 transition-all duration-300">
-                      <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                    <a href={m.social.linkedin} className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-blue-500/50 transition-all duration-300">
+                      <FontAwesomeIcon icon={['fab', 'linkedin']} className="text-xs sm:text-sm" />
                     </a>
                   </div>
                 </div>
