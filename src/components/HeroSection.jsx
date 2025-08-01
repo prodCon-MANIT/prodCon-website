@@ -117,7 +117,7 @@ function HeroSection() {
               Know more
             </a>
             <a
-              href="/about#resources123"
+              href="/about#resources"
               className="flex justify-center items-center border border-white text-base sm:text-xl text-white font-semibold px-4 sm:px-5 py-2 rounded-full shadow-md hover:bg-white hover:text-indigo-900 transition-transform transform hover:scale-105"
             >
               Resource To Learn

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 interface Particle {
   x: number;
@@ -39,7 +40,6 @@ const ParticleBackground: React.FC = () => {
     const animate = () => {
       if (!ctx || !canvas) return;
       
-      // Clear with semi-transparent for motion blur effect
       ctx.fillStyle = 'rgba(15, 11, 31, 0.2)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -50,18 +50,15 @@ const ParticleBackground: React.FC = () => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
-        // Draw particles
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, 1.5, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(191, 170, 255, 0.8)';
         ctx.fill();
       });
 
-      // Draw connections
       for (let i = 0; i < PARTICLE_COUNT; i++) {
         const p1 = particlesRef.current[i];
         for (let j = i + 1; j < PARTICLE_COUNT; j++) {
@@ -208,7 +205,6 @@ const Footer: React.FC = () => (
   </motion.footer>
 );
 
-// Enhanced MissionIcon component
 const MissionIcon: React.FC = () => (
   <motion.div
     initial={{ scale: 0 }}
@@ -252,7 +248,6 @@ const MissionIcon: React.FC = () => (
   </motion.div>
 );
 
-// Enhanced VisionIcon component
 const VisionIcon: React.FC = () => (
   <motion.div
     initial={{ scale: 0 }}
@@ -325,7 +320,6 @@ const MissionVisionCard: React.FC<{
       viewport={{ once: true }}
       transition={{ delay: 0.1 * index, duration: 0.6 }}
     >
-      {/* Decorative gradient corner */}
       <div style={{
         position: "absolute",
         top: 0,
@@ -378,7 +372,6 @@ const MissionVisionCard: React.FC<{
         {description}
       </motion.p>
       
-      {/* Animated connection dots */}
       <div style={{
         position: "absolute",
         bottom: "1.5rem",
@@ -411,7 +404,6 @@ const MissionVisionCard: React.FC<{
   );
 };
 
-// Custom Connect Icon Component
 const ConnectIcon: React.FC = () => (
   <motion.div
     initial={{ scale: 0 }}
@@ -466,7 +458,6 @@ const ConnectIcon: React.FC = () => (
   </motion.div>
 );
 
-// Custom Collaborate Icon Component
 const CollaborateIcon: React.FC = () => (
   <motion.div
     initial={{ scale: 0 }}
@@ -517,7 +508,7 @@ const CollaborateIcon: React.FC = () => (
         strokeLinecap="round"
       />
       <defs>
-        <linearGradient id="collaborateGradient" x1="17" y1="22" x2="47" y2="46" gradientUnits="userSpaceOnUse">
+        <linearGradient id="collaborateGradient" x1="17" y1="22" x2="47" y2="46" gradientUnits="userSpaceOnUuse">
           <stop stopColor="#BFAAFF"/>
           <stop offset="1" stopColor="#9370DB"/>
         </linearGradient>
@@ -526,7 +517,6 @@ const CollaborateIcon: React.FC = () => (
   </motion.div>
 );
 
-// Custom Create Icon Component
 const CreateIcon: React.FC = () => (
   <motion.div
     initial={{ scale: 0 }}
@@ -577,6 +567,7 @@ const CreateIcon: React.FC = () => (
 
 const About: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(0);
+  const location = useLocation();
   
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -584,6 +575,18 @@ const About: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    if (location.hash === '#resources') {
+      const timer = setTimeout(() => {
+        const element = document.getElementById('resources');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash]);
 
   const isMobile = windowWidth < 768;
 
@@ -635,7 +638,6 @@ const About: React.FC = () => {
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -672,7 +674,6 @@ const About: React.FC = () => {
             />
           </motion.div>
 
-          {/* Club Description */}
           <motion.div 
             style={{ 
               ...glassCardStyle, 
@@ -699,7 +700,6 @@ const About: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Mission & Vision Section */}
           <div style={{ 
             display: "grid", 
             gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
@@ -717,7 +717,6 @@ const About: React.FC = () => {
           </div>
           
 
-          {/* Core Values */}
           <div style={{ margin: "4rem 0" }}>
             <motion.h2
               style={{
@@ -763,7 +762,6 @@ const About: React.FC = () => {
                     boxShadow: `0 20px 40px ${value.color}22` 
                   }}
                 >
-                  {/* Floating particles decoration */}
                   <div style={{
                     position: "absolute",
                     top: "1rem",
@@ -814,7 +812,6 @@ const About: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Resources Section */}
           <motion.div 
             id="resources"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -829,7 +826,6 @@ const About: React.FC = () => {
               position: "relative",
             }}
           >
-            {/* Decorative corner */}
             <div style={{
               position: "absolute",
               top: 0,
@@ -904,7 +900,6 @@ const About: React.FC = () => {
   );
 };
 
-// Styles
 const containerStyle = {
   minHeight: "100vh",
   background: "#0F0B1F",
@@ -934,7 +929,6 @@ const lightPurpleGlassCardStyle = {
   transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
 } as const;
 
-// Animation variants
 const coreValuesContainer = {
   hidden: {},
   show: {
