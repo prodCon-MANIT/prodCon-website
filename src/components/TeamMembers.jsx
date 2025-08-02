@@ -40,151 +40,149 @@ const itemVariants = {
 export default function TeamMembers() {
   const [visible, setVisible] = useState(true);
   const [filter, setFilter] = useState('All');
-
   const members = [
-    { 
-      name: 'Kushagra Tiwari', 
-      position: 'Co-founder & President', 
-      department: 'Leadership', 
+    {
+      name: 'Kushagra Tiwari',
+      position: 'Co-founder & President',
+      department: 'Leadership',
       image: kushagraTiwariImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:kushagra@example.com', 
-        linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:Kushagrat808@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/'
+      }
     },
-    { 
-      name: 'Gautam Kumar', 
-      position: 'Co-founder & VP', 
-      department: 'Leadership', 
+    {
+      name: 'Gautam Kumar',
+      position: 'Co-founder & VP',
+      department: 'Leadership',
       image: gautamKumarImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:gautam@example.com', 
-        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:kumargautamsingh104@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/gautam-kumar104/'
+      }
     },
-    { 
-      name: 'Saksham Guliyani', 
-      position: 'Head of Product', 
-      department: 'Product', 
+    {
+      name: 'Saksham Guliyani',
+      position: 'Head of Product',
+      department: 'Product',
       image: sakshamGuliyaniImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:saksham@example.com', 
-        linkedin: 'https://www.linkedin.com/in/guliyanisaksham' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:sakshamguliyani91@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/guliyanisaksham'
+      }
     },
-    { 
-      name: 'Tanishq Sarda', 
-      position: 'Head of Consulting', 
-      department: 'Consulting', 
+    {
+      name: 'Tanishq Sarda',
+      position: 'Head of Consulting',
+      department: 'Consulting',
       image: tanishqSardaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:tanishq@example.com', 
-        linkedin: 'https://www.linkedin.com/in/sardatanishq' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:Sardatanishq@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/sardatanishq'
+      }
     },
-    { 
-      name: 'Aditya Raj Mantri', 
-      position: 'Overall Coordinator', 
-      department: 'Leadership', 
+    {
+      name: 'Aditya Raj Mantri',
+      position: 'Overall Coordinator',
+      department: 'Leadership',
       image: adityaRajMantriImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:aditya@example.com', 
-        linkedin: 'https://www.linkedin.com/in/aditya-raj-mantri-868013267' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:Adityamantri112014@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/aditya-raj-mantri-868013267'
+      }
     },
-    { 
-      name: 'Swati Hansda', 
-      position: 'Research & Content Head (Product)', 
-      department: 'Product', 
+    {
+      name: 'Swati Hansda',
+      position: 'Research & Content Head (Product)',
+      department: 'Product',
       image: swatiHansdaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:swati@example.com', 
-        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:swatihansda1505@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/'
+      }
     },
-    { 
-      name: 'Yash Sharma', 
-      position: 'Research & Content Head (Consulting)', 
-      department: 'Consulting', 
+    {
+      name: 'Yash Sharma',
+      position: 'Research & Content Head (Consulting)',
+      department: 'Consulting',
       image: yashSharmaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:yash@example.com', 
-        linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:ysharma.engineer@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+      }
     },
-    { 
-      name: 'Smriti Shrivastava', 
-      position: 'Treasurer', 
-      department: 'Finance', 
+    {
+      name: 'Smriti Shrivastava',
+      position: 'Treasurer',
+      department: 'Finance',
       image: smritiShrivastavaImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:smriti@example.com', 
-        linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:smriti.shrivastava130304@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      }
     },
-    { 
-      name: 'Ankit Kumar Yadav', 
-      position: 'Technical Head', 
-      department: 'Technical', 
+    {
+      name: 'Ankit Kumar Yadav',
+      position: 'Technical Head',
+      department: 'Technical',
       image: ankitKumarYadavImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:ankit@example.com', 
-        linkedin: 'https://www.linkedin.com/in/ankit-kumar-1065b3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:ankitofficial0723@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/ankit-kumar-1065b3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      }
     },
-    { 
-      name: 'Shayan Fahimi', 
-      position: 'Sponsorship Secretary', 
-      department: 'Sponsorship', 
+    {
+      name: 'Shayan Fahimi',
+      position: 'Sponsorship Secretary',
+      department: 'Sponsorship',
       image: shayanFahimiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:shayan@example.com', 
-        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:msfxinfinity@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245'
+      }
     },
-    { 
-      name: 'Somil Prajapati', 
-      position: 'Logistics & Ops Secretary', 
-      department: 'Operations', 
+    {
+      name: 'Somil Prajapati',
+      position: 'Logistics & Ops Secretary',
+      department: 'Operations',
       image: somilPrajapatiImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:somil@example.com', 
-        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:Somilprajapati17@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      }
     },
-    
-    { 
-      name: 'Rahul Hazra', 
-      position: 'Video Editing Head', 
-      department: 'Creative', 
+    {
+      name: 'Rahul Hazra',
+      position: 'Video Editing Head',
+      department: 'Creative',
       image: rahulHazraImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:rahul@example.com', 
-        linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:rahulhazra64@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b'
+      }
     },
-    { 
-      name: 'Priyansh Kashyap', 
-      position: 'Designing Head', 
-      department: 'Creative', 
+    {
+      name: 'Priyansh Kashyap',
+      position: 'Designing Head',
+      department: 'Creative',
       image: priyanshKashyapImg,
-      social: { 
-        instagram: '#', 
-        email: 'mailto:priyansh@example.com', 
-        linkedin: 'https://www.linkedin.com/in/priyansh-kashyap-9bbbb5259' 
-      } 
+      social: {
+        instagram: '#',
+        email: 'mailto:createdbypriyansh@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/priyansh-kashyap-9bbbb5259'
+      }
     },
   ];
 
@@ -231,7 +229,7 @@ export default function TeamMembers() {
           </motion.div>
 
           {/* Filters */}
-         
+
           {/* Grid */}
           <motion.div
             variants={containerVariants}
@@ -246,8 +244,8 @@ export default function TeamMembers() {
                   <div className="relative mb-2 sm:mb-3 lg:mb-4">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg overflow-hidden">
                       {m.image ? (
-                        <img 
-                          src={m.image} 
+                        <img
+                          src={m.image}
                           alt={m.name}
                           className="w-full h-full object-cover"
                         />
@@ -271,7 +269,7 @@ export default function TeamMembers() {
 
                   {/* Social icons */}
                   <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 mt-8 sm:mt-8 lg:mt-10 opacity-100 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                   
+
                     <a href={m.social.email} className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-red-500/50 transition-all duration-300">
                       <FontAwesomeIcon icon={faEnvelope} className="text-xs sm:text-sm" />
                     </a>
