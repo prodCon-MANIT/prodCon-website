@@ -23,7 +23,7 @@ const ParticleBackground: React.FC = () => {
 
     const PARTICLE_COUNT = 60;
     const CONNECTION_DISTANCE = 80;
-    
+
     const createParticles = () => {
       const particles: Particle[] = [];
       for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -39,7 +39,7 @@ const ParticleBackground: React.FC = () => {
 
     const animate = () => {
       if (!ctx || !canvas) return;
-      
+
       ctx.fillStyle = 'rgba(15, 11, 31, 0.2)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -66,7 +66,7 @@ const ParticleBackground: React.FC = () => {
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          
+
           if (distance < CONNECTION_DISTANCE) {
             const opacity = 1 - (distance / CONNECTION_DISTANCE);
             ctx.strokeStyle = `rgba(186, 160, 255, ${opacity * 0.4})`;
@@ -147,15 +147,15 @@ const FloatingOrbs: React.FC = () => {
   ], []);
 
   return (
-    <div style={{ 
-      position: 'absolute', 
-      top: 0, 
-      left: 0, 
-      width: '100%', 
-      height: '100%', 
-      overflow: 'hidden', 
-      zIndex: 0, 
-      opacity: 0.7 
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      zIndex: 0,
+      opacity: 0.7
     }}>
       {orbs.map((orb) => (
         <motion.div
@@ -188,7 +188,7 @@ const FloatingOrbs: React.FC = () => {
 };
 
 const Footer: React.FC = () => (
-  <motion.footer 
+  <motion.footer
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
@@ -224,24 +224,24 @@ const MissionIcon: React.FC = () => (
     }}
   >
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-      <path 
-        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" 
-        stroke="url(#paint0_linear)" 
+      <path
+        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+        stroke="url(#paint0_linear)"
         strokeWidth="1.5"
       />
-      <path 
-        d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" 
-        stroke="url(#paint1_linear)" 
+      <path
+        d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+        stroke="url(#paint1_linear)"
         strokeWidth="1.5"
       />
       <defs>
         <linearGradient id="paint0_linear" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
         <linearGradient id="paint1_linear" x1="9" y1="9" x2="15" y2="15" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
       </defs>
     </svg>
@@ -267,53 +267,53 @@ const VisionIcon: React.FC = () => (
     }}
   >
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-      <path 
-        d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" 
-        stroke="url(#paint0_linear)" 
+      <path
+        d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+        stroke="url(#paint0_linear)"
         strokeWidth="1.5"
-        strokeLinecap="round" 
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path 
-        d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" 
-        stroke="url(#paint1_linear)" 
+      <path
+        d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+        stroke="url(#paint1_linear)"
         strokeWidth="1.5"
-        strokeLinecap="round" 
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
       <defs>
         <linearGradient id="paint0_linear" x1="1" y1="4" x2="23" y2="20" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
         <linearGradient id="paint1_linear" x1="9" y1="9" x2="15" y2="15" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
       </defs>
     </svg>
   </motion.div>
 );
 
-const MissionVisionCard: React.FC<{ 
-  title: string; 
-  description: string; 
+const MissionVisionCard: React.FC<{
+  title: string;
+  description: string;
   index: number;
 }> = ({ title, description, index }) => {
   const isMission = index === 0;
-  
+
   return (
     <motion.div
-      style={{ 
-        ...lightPurpleGlassCardStyle, 
+      style={{
+        ...lightPurpleGlassCardStyle,
         padding: "2.5rem",
         height: "100%",
         position: "relative",
         overflow: "hidden",
       }}
-      whileHover={{ 
-        y: -10, 
-        boxShadow: "0 20px 40px rgba(147, 112, 219, 0.3)" 
+      whileHover={{
+        y: -10,
+        boxShadow: "0 20px 40px rgba(147, 112, 219, 0.3)"
       }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +330,7 @@ const MissionVisionCard: React.FC<{
         borderBottomLeftRadius: "100%",
         zIndex: 0,
       }} />
-      
+
       <div style={{
         display: "flex",
         alignItems: "center",
@@ -339,10 +339,10 @@ const MissionVisionCard: React.FC<{
         zIndex: 1,
       }}>
         {isMission ? <MissionIcon /> : <VisionIcon />}
-        
-        <motion.h3 
-          style={{ 
-            fontSize: "1.8rem", 
+
+        <motion.h3
+          style={{
+            fontSize: "1.8rem",
             margin: 0,
             color: "#fff",
             fontWeight: 700,
@@ -357,9 +357,9 @@ const MissionVisionCard: React.FC<{
           {title}
         </motion.h3>
       </div>
-      
-      <motion.p 
-        style={{ 
+
+      <motion.p
+        style={{
           lineHeight: 1.7,
           fontSize: "1.1rem",
           position: "relative",
@@ -371,7 +371,7 @@ const MissionVisionCard: React.FC<{
       >
         {description}
       </motion.p>
-      
+
       <div style={{
         position: "absolute",
         bottom: "1.5rem",
@@ -388,12 +388,12 @@ const MissionVisionCard: React.FC<{
               borderRadius: "50%",
               background: "rgba(191, 170, 255, 0.6)",
             }}
-            animate={{ 
+            animate={{
               y: [0, -5, 0],
               opacity: [0.6, 1, 0.6],
             }}
-            transition={{ 
-              duration: 1.5, 
+            transition={{
+              duration: 1.5,
               repeat: Infinity,
               delay: i * 0.2,
             }}
@@ -419,39 +419,39 @@ const ConnectIcon: React.FC = () => (
     }}
   >
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-      <path 
-        d="M32 44C41.3888 44 49 36.3888 49 27C49 17.6112 41.3888 10 32 10C22.6112 10 15 17.6112 15 27C15 36.3888 22.6112 44 32 44Z" 
-        stroke="url(#connectGradient)" 
+      <path
+        d="M32 44C41.3888 44 49 36.3888 49 27C49 17.6112 41.3888 10 32 10C22.6112 10 15 17.6112 15 27C15 36.3888 22.6112 44 32 44Z"
+        stroke="url(#connectGradient)"
         strokeWidth="2"
       />
-      <path 
-        d="M22 40L18 54" 
-        stroke="url(#connectGradient)" 
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path 
-        d="M42 40L46 54" 
-        stroke="url(#connectGradient)" 
+      <path
+        d="M22 40L18 54"
+        stroke="url(#connectGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path 
-        d="M32 44V54" 
-        stroke="url(#connectGradient)" 
+      <path
+        d="M42 40L46 54"
+        stroke="url(#connectGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <circle 
-        cx="32" 
-        cy="27" 
-        r="3" 
-        fill="url(#connectGradient)" 
+      <path
+        d="M32 44V54"
+        stroke="url(#connectGradient)"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <circle
+        cx="32"
+        cy="27"
+        r="3"
+        fill="url(#connectGradient)"
       />
       <defs>
         <linearGradient id="connectGradient" x1="15" y1="10" x2="49" y2="54" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
       </defs>
     </svg>
@@ -473,44 +473,44 @@ const CollaborateIcon: React.FC = () => (
     }}
   >
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-      <path 
-        d="M40 36C43.866 36 47 32.866 47 29C47 25.134 43.866 22 40 22C36.134 22 33 25.134 33 29C33 32.866 36.134 36 40 36Z" 
-        stroke="url(#collaborateGradient)" 
+      <path
+        d="M40 36C43.866 36 47 32.866 47 29C47 25.134 43.866 22 40 22C36.134 22 33 25.134 33 29C33 32.866 36.134 36 40 36Z"
+        stroke="url(#collaborateGradient)"
         strokeWidth="2"
       />
-      <path 
-        d="M24 36C27.866 36 31 32.866 31 29C31 25.134 27.866 22 24 22C20.134 22 17 25.134 17 29C17 32.866 20.134 36 24 36Z" 
-        stroke="url(#collaborateGradient)" 
+      <path
+        d="M24 36C27.866 36 31 32.866 31 29C31 25.134 27.866 22 24 22C20.134 22 17 25.134 17 29C17 32.866 20.134 36 24 36Z"
+        stroke="url(#collaborateGradient)"
         strokeWidth="2"
       />
-      <path 
-        d="M28 41C28 42.3261 28.5268 43.5979 29.4645 44.5355C30.4021 45.4732 31.6739 46 33 46H35C36.3261 46 37.5979 45.4732 38.5355 44.5355C39.4732 43.5979 40 42.3261 40 41" 
-        stroke="url(#collaborateGradient)" 
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path 
-        d="M12 41C12 42.3261 12.5268 43.5979 13.4645 44.5355C14.4021 45.4732 15.6739 46 17 46H19C20.3261 46 21.5979 45.4732 22.5355 44.5355C23.4732 43.5979 24 42.3261 24 41" 
-        stroke="url(#collaborateGradient)" 
+      <path
+        d="M28 41C28 42.3261 28.5268 43.5979 29.4645 44.5355C30.4021 45.4732 31.6739 46 33 46H35C36.3261 46 37.5979 45.4732 38.5355 44.5355C39.4732 43.5979 40 42.3261 40 41"
+        stroke="url(#collaborateGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path 
-        d="M36 29L40 29" 
-        stroke="url(#collaborateGradient)" 
+      <path
+        d="M12 41C12 42.3261 12.5268 43.5979 13.4645 44.5355C14.4021 45.4732 15.6739 46 17 46H19C20.3261 46 21.5979 45.4732 22.5355 44.5355C23.4732 43.5979 24 42.3261 24 41"
+        stroke="url(#collaborateGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path 
-        d="M24 29L28 29" 
-        stroke="url(#collaborateGradient)" 
+      <path
+        d="M36 29L40 29"
+        stroke="url(#collaborateGradient)"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M24 29L28 29"
+        stroke="url(#collaborateGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <defs>
         <linearGradient id="collaborateGradient" x1="17" y1="22" x2="47" y2="46" gradientUnits="userSpaceOnUuse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
       </defs>
     </svg>
@@ -532,33 +532,33 @@ const CreateIcon: React.FC = () => (
     }}
   >
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-      <path 
-        d="M32 20V44" 
-        stroke="url(#createGradient)" 
+      <path
+        d="M32 20V44"
+        stroke="url(#createGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path 
-        d="M20 32H44" 
-        stroke="url(#createGradient)" 
+      <path
+        d="M20 32H44"
+        stroke="url(#createGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path 
-        d="M32 54C43.0457 54 52 45.0457 52 34C52 22.9543 43.0457 14 32 14C20.9543 14 12 22.9543 12 34C12 45.0457 20.9543 54 32 54Z" 
-        stroke="url(#createGradient)" 
+      <path
+        d="M32 54C43.0457 54 52 45.0457 52 34C52 22.9543 43.0457 14 32 14C20.9543 14 12 22.9543 12 34C12 45.0457 20.9543 54 32 54Z"
+        stroke="url(#createGradient)"
         strokeWidth="2"
       />
-      <path 
-        d="M42 22L46 18" 
-        stroke="url(#createGradient)" 
+      <path
+        d="M42 22L46 18"
+        stroke="url(#createGradient)"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <defs>
         <linearGradient id="createGradient" x1="12" y1="14" x2="52" y2="54" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#BFAAFF"/>
-          <stop offset="1" stopColor="#9370DB"/>
+          <stop stopColor="#BFAAFF" />
+          <stop offset="1" stopColor="#9370DB" />
         </linearGradient>
       </defs>
     </svg>
@@ -568,7 +568,7 @@ const CreateIcon: React.FC = () => (
 const About: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const location = useLocation();
-  
+
   useEffect(() => {
     setWindowWidth(window.innerWidth);
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -593,19 +593,19 @@ const About: React.FC = () => {
   const coreValues = useMemo(() => [
     {
       title: "Connect",
-      description: "Building bridges between students, industry experts, and alumni to create a powerful network of opportunities and knowledge sharing.",
+      description: "Building a platform where students, industry experts, and alumni can connect & foster a powerful network of opportunities and knowledge sharing.",
       icon: <ConnectIcon />,
       color: "#BFAAFF"
     },
     {
       title: "Collaborate",
-      description: "Fostering teamwork to solve complex challenges and co-create innovative solutions through diverse perspectives and shared expertise.",
+      description: "At ProdCon,We empower our  teams to solve complex challenges and co-create innovative solutions by collaborating with Startups, NGOs through diverse perspectives and shared expertise.",
       icon: <CollaborateIcon />,
       color: "#A084E8"
     },
     {
       title: "Create",
-      description: "Empowering members to transform ideas into reality through experimentation, prototyping, and bringing innovative concepts to life.",
+      description: "Creating a space  to transform ideas into reality through user-centric experimentation, rapid prototyping, and delivering innovation in Product &  Strategy through solutions with measurable impact.",
       icon: <CreateIcon />,
       color: "#9370DB"
     }
@@ -614,11 +614,13 @@ const About: React.FC = () => {
   const missionVision = useMemo(() => [
     {
       title: "Mission",
-      description: `At ProdCon, our mission is to foster a bold culture of exploration, strategic thinking, and purpose-driven execution. We are building a student-powered movement where ideas are tested, challenges are embraced, and learning goes beyond the classroom shaping minds that can navigate ambiguity, build solutions, and lead with clarity.`
+      description: `At ProdCon, our mission is to cultivate a bold culture of exploration, analytical thinking, and purpose-driven execution to make a real impact.
+We are building a student-first Community where ideas are tested, challenges are embraced, and learning goes beyond the classroom . Students gain hands-on experience with real projects which  empower & shape their minds to navigate ambiguity, make a real impact, lead with clarity and purpose in the realms of Product and Consulting.
+`
     },
     {
       title: "Vision",
-      description: `At ProdCon, we empower students to become bold problem solvers and future-ready leaders in product and consulting. We blend strategy, innovation, and hands-on exposure to turn curiosity into capability and ambition into impact.`
+      description: `At ProdCon, we empower students to become bold problem-solvers and future-ready business leaders to make a ground impact in the world of Product and Consulting. We blend strategy, innovation, and hands-on exposure to transform curiosity into excellence, and ambition into impact.`
     }
   ], []);
 
@@ -674,40 +676,41 @@ const About: React.FC = () => {
             />
           </motion.div>
 
-          <motion.div 
-            style={{ 
-              ...glassCardStyle, 
+          <motion.div
+            style={{
+              ...glassCardStyle,
               marginBottom: "4rem",
               padding: isMobile ? "1.5rem" : "2.5rem"
             }}
-            whileHover={{ 
-              scale: 1.02, 
-              boxShadow: "0 12px 40px 0 rgba(103, 76, 192, 0.25)" 
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 12px 40px 0 rgba(103, 76, 192, 0.25)"
             }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.7, ease: 'easeOut' }}
           >
-            <p style={{ 
-              fontSize: "1.2rem", 
+            <p style={{
+              fontSize: "1.2rem",
               lineHeight: 1.7,
               textAlign: "center",
               maxWidth: "900px",
               margin: "0 auto"
             }}>
-              The Product & Consulting Club at NIT Bhopal, widely known as ProdCon, is a premier, student-led initiative committed to building and nurturing future leaders in Consulting and Product Management. We aim to create a high-impact learning ecosystem that provides students with real-world exposure and fosters the development of structured problem-solving skills.
+              The Product & Consulting Club at NIT Bhopal, widely known as ProdCon, is a premier student-led initiative dedicated to building and nurturing future leaders in Product Management and Consulting.
+              We aim to create a high-impact learning ecosystem that offers students real-world exposure, accelerates professional growth, and fosters the development of structured problem-solving, strategic thinking, and decision-making skills.
             </p>
           </motion.div>
 
-          <div style={{ 
-            display: "grid", 
+          <div style={{
+            display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-            gap: "2.5rem", 
+            gap: "2.5rem",
             marginBottom: "3rem"
           }}>
             {missionVision.map((item, index) => (
-              <MissionVisionCard 
+              <MissionVisionCard
                 key={index}
                 index={index}
                 title={item.title}
@@ -715,7 +718,7 @@ const About: React.FC = () => {
               />
             ))}
           </div>
-          
+
 
           <div style={{ margin: "4rem 0" }}>
             <motion.h2
@@ -733,8 +736,8 @@ const About: React.FC = () => {
             >
               Our Guiding Principles: The 3'C
             </motion.h2>
-            
-            <motion.div 
+
+            <motion.div
               style={{
                 display: "grid",
                 gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
@@ -749,17 +752,17 @@ const About: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={coreValueItem}
-                  style={{ 
-                    ...glassCardStyle, 
+                  style={{
+                    ...glassCardStyle,
                     padding: "2rem",
                     textAlign: "center",
                     position: "relative",
                     overflow: "hidden",
                     border: `1px solid ${value.color}33`,
                   }}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    boxShadow: `0 20px 40px ${value.color}22` 
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: `0 20px 40px ${value.color}22`
                   }}
                 >
                   <div style={{
@@ -779,29 +782,29 @@ const About: React.FC = () => {
                           background: value.color,
                           opacity: 0.6,
                         }}
-                        animate={{ 
+                        animate={{
                           y: [0, -3, 0],
                         }}
-                        transition={{ 
-                          duration: 1.5 + i, 
+                        transition={{
+                          duration: 1.5 + i,
                           repeat: Infinity,
                           delay: i * 0.2,
                         }}
                       />
                     ))}
                   </div>
-                  
+
                   {value.icon}
-                  
-                  <h3 style={{ 
-                    fontSize: "1.8rem", 
+
+                  <h3 style={{
+                    fontSize: "1.8rem",
                     marginBottom: "1rem",
                     color: value.color,
                     fontWeight: 700
                   }}>
                     {value.title}
                   </h3>
-                  <p style={{ 
+                  <p style={{
                     lineHeight: 1.7,
                     fontSize: "1.1rem"
                   }}>
@@ -812,13 +815,13 @@ const About: React.FC = () => {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             id="resources"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            style={{ 
-              ...glassCardStyle, 
+            style={{
+              ...glassCardStyle,
               padding: "3rem 2rem",
               margin: "4rem auto",
               maxWidth: "700px",
@@ -835,7 +838,7 @@ const About: React.FC = () => {
               background: "linear-gradient(135deg, rgba(191, 170, 255, 0.1), transparent 70%)",
               borderBottomRightRadius: "100%",
             }} />
-            
+
             <h2 style={{
               fontSize: "clamp(1.8rem, 3vw, 2.3rem)",
               marginBottom: "1.5rem",
@@ -873,10 +876,10 @@ const About: React.FC = () => {
                 position: "relative",
                 zIndex: 1,
               }}
-              whileHover={{ 
-                scale: 1.08, 
-                background: "linear-gradient(90deg, #bfaaff 0%, #a084e8 100%)", 
-                boxShadow: "0 0 32px rgba(191, 170, 255, 0.5)" 
+              whileHover={{
+                scale: 1.08,
+                background: "linear-gradient(90deg, #bfaaff 0%, #a084e8 100%)",
+                boxShadow: "0 0 32px rgba(191, 170, 255, 0.5)"
               }}
               whileTap={{ scale: 0.97 }}
             >
@@ -887,7 +890,7 @@ const About: React.FC = () => {
                 fill="currentColor"
                 stroke="none"
               >
-                <path d="M7.73 13.31v-2.62l4.27-7.39h2.62l-4.27 7.39h5.23l-7.85 9.7 2.62-7.08z"/>
+                <path d="M7.73 13.31v-2.62l4.27-7.39h2.62l-4.27 7.39h5.23l-7.85 9.7 2.62-7.08z" />
               </svg>
               Access Resources
             </motion.a>
@@ -940,13 +943,13 @@ const coreValuesContainer = {
 
 const coreValueItem = {
   hidden: { opacity: 0, y: 40 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 0.6, 
-      ease: [0.16, 1, 0.3, 1] 
-    } 
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1]
+    }
   },
 };
 

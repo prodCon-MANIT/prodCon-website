@@ -103,9 +103,11 @@ function HeroSection() {
           <p className="mt-6 mb-6 text-base sm:text-lg leading-relaxed text-justify text-white/90">
             Welcome to the <strong>Product and Consulting Club</strong> of MANIT Bhopal —
             where <span className="text-purple-300 font-medium">ideas meet industry</span>.
-            We bridge academic knowledge with real‐world consulting and product management skills.
-            Our initiatives include <strong>case studies</strong>, <strong>guesstimates</strong> and <strong>mock interviews</strong>.
-            Flagship events like  foster strategic thinking and business insight.
+            We bridge academic knowledge with real-world Product management and Consulting exposure.
+            Our initiatives include <strong>case studies</strong>, <strong>workshop</strong>, <strong>guesstimates</strong>, <strong>mock interviews</strong> and <strong>real world problem exposure</strong>.
+            We partners with NGOs, Startups & business and  help them achieve their goals .
+            
+            Flagship events like NirmAn & more upcoming are designed to foster strategic thinking, market insight, and business acumen to the Students.
             Join us to shape your <span className="text-indigo-300 font-medium">journey from campus to corporate</span>.
           </p>
 
