@@ -32,9 +32,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white">ProdCon</h2>
             <p className="text-sm">
-              Solving what truly matters,
+              Driven by ideas
               <br />
-              Turning ideas into impact
+              Defined by Impact.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, idx) => (
