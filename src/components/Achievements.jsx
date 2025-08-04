@@ -19,12 +19,11 @@ export default function Achievements() {
     >
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 flex flex-col items-center justify-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 sm:mb-6 text-center font-bold drop-shadow-lg px-4">
-          Our Achievements
-        </h2>
+        
+        <h1 className="text-5xl text-center font-bold text-white mb-4">Our Achievements</h1>
         <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 lg:mb-10 px-4">
           <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-          <span className="text-white/90 text-sm sm:text-base lg:text-lg font-light">Highlights</span>
+          <span className="text-white/90 text-lg sm:text-base lg:text-lg font-light">Highlights</span>
           <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
         <div className="space-y-8 sm:space-y-10 lg:space-y-14 w-full">
