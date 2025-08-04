@@ -180,7 +180,7 @@ function HeroSection() {
               </a>
               <a
                 href="/about#resources"
-                className="relative overflow-hidden flex justify-center items-center border border-white/60 bg-white/5 backdrop-blur-sm text-base sm:text-xl text-white font-semibold px-4 sm:px-5 py-2 rounded-full shadow-lg shadow-white/10 hover:bg-white hover:text-indigo-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
+                className="relative overflow-hidden flex justify-center items-center border border-white/60 bg-white backdrop-blur-sm text-base sm:text-xl text-[#2b27a5] font-semibold px-4 sm:px-5 py-2 rounded-full shadow-lg shadow-white/10 hover:bg-white hover:text-indigo-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Resource To Learn</span>
               </a>

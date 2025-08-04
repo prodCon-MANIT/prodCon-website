@@ -108,7 +108,7 @@ function Contact() {
             <h2 className="text-lg md:text-2xl font-bold text-black text-center md:text-left">
               <span className="block sm:hidden">Become our Sponsor</span>
               <span className="hidden sm:block">
-                Become our Sponsor
+                Become our <br />Sponsor
               </span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg  border border-gray-300">
@@ -119,7 +119,7 @@ function Contact() {
                 className="flex-1 px-5 py-3 mb-4 md:mb-0 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base w-full sm:w-auto "
               />
               <button
-                className="mt-2 sm:mt-0 sm:ml-2 bg-purple-600 text-white px-2 sm:px-5 sm:py-3 md:py-0 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-purple-700 transition-colors w-full sm:w-auto"
+                className="mt-2 sm:mt-0 sm:ml-2 bg-amber-400 text-white px-2 sm:px-5 sm:py-3 md:py-0 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-purple-700 transition-colors w-full sm:w-auto"
               >
                 SUBMIT
               </button>
