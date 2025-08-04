@@ -169,6 +169,7 @@ function HeroSection() {
               Join us to shape your <span className="text-indigo-300 font-medium">journey from campus to corporate</span>.
             </p>
 
+
             <div className="flex flex-col sm:flex-row sm:justify-start sm:space-x-4 space-y-4 sm:space-y-0">
               <a
                 href="/about"
