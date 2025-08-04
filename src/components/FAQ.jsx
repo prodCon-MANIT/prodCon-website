@@ -62,18 +62,18 @@ const AccordionItem = ({ question, answer }) => {
 export default function FAQ() {
   const faqs = [
     {
-      question: "What kind of activities/Events does ProdCon conduct?",
+      question: "What kind of activities/events does ProdCon conduct?",
       answer:
-      "We at ProdCon chands-on sessions like guesstimates, market entry strategy, design sprints, and product teardown workshops — mimicking real-world consulting and product challenges."
+      "At ProdCon, we host engaging and hands-on sessions such as Guesstimates workshops, market entry strategy simulations, design sprints, and product teardown workshops , all designed to mimic real-world Product management and Consulting practices.Additionally we have initiatives like NirmAn especially for ProdCon members."
     },
     {
       question: "Is there any  prior knowledge required to join ProdCon ?",
       answer:
-        "Not at all. We are looking for someone who thrives to make an impact and is eager to learn.We conduct beginner-friendly sessions to upskill, specially for our team members through an initiative called NirmAn"
+        "Not at all. We welcome students who are eager to learn and want to make an impact. Our beginner-friendly sessions help members build skills first in product thinking, business strategy, and Consulting frameworks , especially through our training initiative called NirmAn."
     },
     {
       question: "How does ProdCon help with placements?",
-      answer: "We run mock interviews resume workshops,, and case prep cohorts. Many of our members land roles at top firms like  Flipkart, Amazon and Microsoft, with guidance from our strong alumni network."
+      answer: "We conduct mock interviews, resume workshops, and Case Interview prep cohorts to prepare members for roles in Product, Consulting, and Strategy. Many of our mentors are leading Product at  top firms like Flipkart, Amazon, and Microsoft & have experience in business Consulting at MBBs of World."
     }
   ];
 
