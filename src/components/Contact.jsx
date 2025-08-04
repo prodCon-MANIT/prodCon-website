@@ -62,98 +62,68 @@ function Contact() {
     }));
   };
 
-  
-const handleContactSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  
-  try {
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxVvzjE_kf-SCVp61exDLw2h-XqWLm3NviRW7gJ6tYP2tdqPsQXavJqU68xCJsGP0eM/exec';
-    
-    const response = await fetch(scriptUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(contactFormData)
-    });
 
-    setSubmitMessage('Message sent successfully!');
-    
-    setContactFormData({
-      fullName: '',
-      email: '',
-      message: ''
-    });
-    
-  } catch (error) {
-    setSubmitMessage('Error sending message. Please try again.');
-    console.error('Error:', error);
-  } finally {
-    setIsSubmitting(false);
-    setTimeout(() => setSubmitMessage(''), 3000);
-  }
-};
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxVvzjE_kf-SCVp61exDLw2h-XqWLm3NviRW7gJ6tYP2tdqPsQXavJqU68xCJsGP0eM/exec';
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactFormData)
+      });
+
+      setSubmitMessage('Message sent successfully!');
+
+      setContactFormData({
+        fullName: '',
+        email: '',
+        message: ''
+      });
+
+    } catch (error) {
+      setSubmitMessage('Error sending message. Please try again.');
+      console.error('Error:', error);
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitMessage(''), 3000);
+    }
+  };
 
   return (
     <div className="overflow-x-hidden text-white font-sans">
       <div
-        className="min-h-screen bg-cover bg-center flex flex-col items-center justify-end relative px-4 sm:px-6 md:px-8"
+        className="md:min-h-60 min-h-80 bg-cover bg-center flex flex-col items-center justify-end  px-4 sm:px-6 md:px-8 pb-10"
         style={{ backgroundImage: `url(${web_gradient})` }}
       >
-        {/* Background blur blob */}
-        <div className="absolute w-48 sm:w-72 md:w-96 h-32 sm:h-48 md:h-64 bg-purple-700/10 rounded-full blur-2xl top-1 left-16 z-0" />
 
-        {/* Heading + Sponsors */}
-        <div className="z-10 w-full flex flex-col items-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-[57px]">
-            Our Media Sponsors
-          </h1>
-
-          {/* Sponsors Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 w-full max-w-4xl py-4 px-9 sm:px-4">
-            {sponsors.map((sponsor, index) => (
-              <a
-                key={index}
-                href={sponsor.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-3 sm:p-6 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-              >
-                <span className="text-base sm:text-lg font-semibold text-black">{sponsor.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Become Sponsor Section */}
         <div className="w-full px-4">
-          <div className="top-full bg-white rounded-xl p-3 md:p-7 flex flex-col md:flex-row items-center md:items-start justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
+          <div className="bg-white rounded-xl md:p-4 p-3 flex flex-col md:flex-row items-center md:items-center justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
             <h2 className="text-lg md:text-2xl font-bold text-black text-center md:text-left">
               <span className="block sm:hidden">Become our Sponsor</span>
               <span className="hidden sm:block">
-                Become our<br />Sponsor
+                Become our Sponsor
               </span>
             </h2>
-            <form 
-              className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg p-2 sm:p-4 border border-gray-300"
-            >
+            <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg  border border-gray-300">
               <input
                 type="email"
                 placeholder="Your email"
                 required
-                className="flex-1 px-5 py-1 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base"
+                className="flex-1 px-5 py-3 mb-4 md:mb-0 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base w-full sm:w-auto "
               />
-              <div>
-                <button 
-                  type="submit"
-                  className="mt-2 sm:mt-0 sm:ml-2 bg-yellow-500 text-white px-30 sm:px-5 py-3 rounded-lg text-sm md:text-base font-medium hover:bg-yellow-600 transition"
-                >
-                  SUBMIT
-                </button>
-              </div>
-            </form>
+              <button
+                className="mt-2 sm:mt-0 sm:ml-2 bg-purple-600 text-white px-2 sm:px-5 sm:py-3 md:py-0 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-purple-700 transition-colors w-full sm:w-auto"
+              >
+                SUBMIT
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -259,14 +229,13 @@ const handleContactSubmit = async (e) => {
             <div className="w-full max-w-md">
               <div className="backdrop-blur-lg bg-white/5 p-6 rounded-2xl">
                 <h3 className="text-xl font-bold text-white mb-6 text-left">Write to us</h3>
-                
+
                 {/* Submit Message */}
                 {submitMessage && (
-                  <div className={`mb-4 p-3 rounded-lg text-sm ${
-                    submitMessage.includes('Error') 
-                      ? 'bg-red-500/20 text-red-300 border border-red-500/30' 
-                      : 'bg-green-500/20 text-green-300 border border-green-500/30'
-                  }`}>
+                  <div className={`mb-4 p-3 rounded-lg text-sm ${submitMessage.includes('Error')
+                    ? 'bg-red-500/20 text-red-300 border border-red-500/30'
+                    : 'bg-green-500/20 text-green-300 border border-green-500/30'
+                    }`}>
                     {submitMessage}
                   </div>
                 )}
