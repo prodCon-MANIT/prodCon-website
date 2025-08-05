@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contact.css';
 import web_gradient from "../assets/web_gradient.png";
 import myImage from "../assets/location-bg.webp";
@@ -8,6 +8,15 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
+  const [contactFormData, setContactFormData] = useState({
+    fullName: '',
+    email: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
   const sponsors = [
     {
       name: "xyz",
@@ -25,7 +34,6 @@ function Contact() {
       name: "xyz",
       url: "https://wadhwanifoundation.org/"
     },
-
     {
       name: "xyz",
       url: "https://wadhwanifoundation.org/"
@@ -44,84 +52,98 @@ function Contact() {
     },
   ];
 
+
+
+  const handleContactInputChange = (e) => {
+    const { name, value } = e.target;
+    setContactFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxVvzjE_kf-SCVp61exDLw2h-XqWLm3NviRW7gJ6tYP2tdqPsQXavJqU68xCJsGP0eM/exec';
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactFormData)
+      });
+
+      setSubmitMessage('Message sent successfully!');
+
+      setContactFormData({
+        fullName: '',
+        email: '',
+        message: ''
+      });
+
+    } catch (error) {
+      setSubmitMessage('Error sending message. Please try again.');
+      console.error('Error:', error);
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitMessage(''), 3000);
+    }
+  };
+
   return (
-    <div className=" overflow-x-hidden  text-white font-sans">
-    <div
-  className="min-h-screen bg-cover bg-center flex flex-col items-center justify-end relative px-4 sm:px-6 md:px-8"
-  style={{ backgroundImage: `url(${web_gradient})` }}
->
-  {/* Background blur blob */}
-  <div className="absolute w-48 sm:w-72 md:w-96 h-32 sm:h-48 md:h-64 bg-purple-700/10 rounded-full blur-2xl top-1 left-16 z-0" />
+    <div className="overflow-x-hidden text-white font-sans">
+      <div
+        className="md:min-h-60 min-h-80 bg-cover bg-center flex flex-col items-center justify-end  px-4 sm:px-6 md:px-8 pb-10"
+        style={{ backgroundImage: `url(${web_gradient})` }}
+      >
 
-  {/* Heading + Sponsors */}
-  <div className="z-10 w-full flex flex-col items-center">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-[57px]">
-      Our Media Sponsors
-    </h1>
-
-    {/* Sponsors Grid */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 w-full max-w-4xl py-4 px-9 sm:px-4">
-      {sponsors.map((sponsor, index) => (
-        <a
-          key={index}
-          href={sponsor.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white rounded-xl p-3 sm:p-6 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-        >
-          <span className="text-base sm:text-lg font-semibold text-black">{sponsor.name}</span>
-        </a>
-      ))}
-    </div>
-  
-</div>
-
-
-        {/* Become Sponsor Section */}
-        <div className=" w-full px-4">
-          <div className="  top-full  bg-white rounded-xl p-3 md:p-7 flex flex-col md:flex-row items-center md:items-start justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
+        <div className="w-full px-4">
+          <div className="bg-white rounded-xl md:p-4 p-3 flex flex-col md:flex-row items-center md:items-center justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
             <h2 className="text-lg md:text-2xl font-bold text-black text-center md:text-left">
-            <span className="block sm:hidden">Become our Sponsor</span>
-  <span className="hidden sm:block">
-    Become our<br />Sponsor
-  </span>
+              <span className="block sm:hidden">Become our Sponsor</span>
+              <span className="hidden sm:block">
+                Become our <br />Sponsor
+              </span>
             </h2>
-            <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg p-2 sm:p-4 border border-gray-300">
+            <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg  border border-gray-300">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-5 py-1 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base"
+                required
+                className="flex-1 px-5 py-3 mb-4 md:mb-0 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base w-full sm:w-auto "
               />
-             
-              <div>
-              <button className="mt-2 sm:mt-0 sm:ml-2 bg-yellow-500 text-white px-30 sm:px-5 py-3 rounded-lg text-sm md:text-base font-medium hover:bg-yellow-600 transition">
+              <button
+                className="mt-2 sm:mt-0 sm:ml-2 bg-amber-400 text-white px-2 sm:px-5 sm:py-3 md:py-0 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-purple-700 transition-colors w-full sm:w-auto"
+              >
                 SUBMIT
               </button>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Location Section */}
-      <div >
+      <div>
         <div
           className="relative bg-cover bg-center text-center text-white"
           style={{
             backgroundImage: `url(${myImage})`,
             height: "600px",
-             backgroundSize: "cover",         // ensures the image covers the whole div
-    backgroundPosition: "center"
-            
+            backgroundSize: "cover",
+            backgroundPosition: "center"
           }}
         >
-          <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center px-4">
+          <div className="absolute inset-0 bg-opacity-60 flex flex-col items-center justify-center px-4">
             <h2 className="text-5xl font-bold text-[#D99343] mb-4">Location</h2>
-            <p className=" font-medium mb-2 sm:font-bold text-xl sm:text-5xl">Maulana Azad National Institute of Technology</p>
+            <p className="font-medium mb-2 sm:font-bold text-xl sm:text-5xl">Maulana Azad National Institute of Technology</p>
             <p className="text-md max-w-xl">
               <FontAwesomeIcon icon={faLocationDot} className="mr-2 text-white" />
-
-
               Link Road Number 3, Near Kali Mata Mandir, Bhopal, Madhya Pradesh, India 462003
             </p>
             <div
@@ -133,8 +155,6 @@ function Contact() {
               className="line"
             ></div>
           </div>
-
-
         </div>
       </div>
 
@@ -145,6 +165,7 @@ function Contact() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="MANIT Bhopal Location"
       ></iframe>
 
       {/* Contact Details & Form Section */}
@@ -167,12 +188,12 @@ function Contact() {
                   <h3 className="text-white font-semibold mb-2 text-base">Call Us</h3>
                   <div className="space-y-2">
                     <div>
-                      <p className="text-purple-300 font-medium  text-m">Kushagra Tiwari</p>
+                      <p className="text-purple-300 font-medium text-m">Kushagra Tiwari</p>
                       <a href="tel:+918092834736" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">+91 8092834736</a>
                     </div>
                     <div>
-                      <p className="text-purple-300 font-text-m">Saksham Guliyani</p>
-                      <a href="tel:+919462945410" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">+91 89622 70969</a>
+                      <p className="text-purple-300 font-medium text-m">Saksham Guliyani</p>
+                      <a href="tel:+918962270969" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">+91 89622 70969</a>
                     </div>
                   </div>
                 </div>
@@ -208,10 +229,24 @@ function Contact() {
             <div className="w-full max-w-md">
               <div className="backdrop-blur-lg bg-white/5 p-6 rounded-2xl">
                 <h3 className="text-xl font-bold text-white mb-6 text-left">Write to us</h3>
-                <form className="space-y-4">
+
+                {/* Submit Message */}
+                {submitMessage && (
+                  <div className={`mb-4 p-3 rounded-lg text-sm ${submitMessage.includes('Error')
+                    ? 'bg-red-500/20 text-red-300 border border-red-500/30'
+                    : 'bg-green-500/20 text-green-300 border border-green-500/30'
+                    }`}>
+                    {submitMessage}
+                  </div>
+                )}
+
+                <form className="space-y-4" onSubmit={handleContactSubmit}>
                   <div className="relative">
                     <input
                       type="text"
+                      name="fullName"
+                      value={contactFormData.fullName}
+                      onChange={handleContactInputChange}
                       required
                       placeholder="Full Name"
                       className="w-full px-4 py-3 bg-white/5 rounded-lg text-white border border-purple-500/20 focus:border-purple-500 outline-none transition-all duration-300 placeholder-gray-400 text-sm"
@@ -220,6 +255,9 @@ function Contact() {
                   <div className="relative">
                     <input
                       type="email"
+                      name="email"
+                      value={contactFormData.email}
+                      onChange={handleContactInputChange}
                       required
                       placeholder="Email Address"
                       className="w-full px-4 py-3 bg-white/5 rounded-lg text-white border border-purple-500/20 focus:border-purple-500 outline-none transition-all duration-300 placeholder-gray-400 text-sm"
@@ -227,6 +265,9 @@ function Contact() {
                   </div>
                   <div className="relative">
                     <textarea
+                      name="message"
+                      value={contactFormData.message}
+                      onChange={handleContactInputChange}
                       required
                       placeholder="Your Message"
                       rows="3"
@@ -235,10 +276,12 @@ function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-purple-400 text-white font-semibold py-3 px-6 rounded-lg 
-                    shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transform hover:scale-[1.02] transition-all duration-300 text-sm"
+                    disabled={isSubmitting}
+                    className={`w-full bg-gradient-to-r from-purple-600 to-purple-400 text-white font-semibold py-3 px-6 rounded-lg 
+                    shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transform hover:scale-[1.02] transition-all duration-300 text-sm
+                    ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
@@ -246,7 +289,6 @@ function Contact() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
