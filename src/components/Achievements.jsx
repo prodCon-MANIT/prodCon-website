@@ -37,6 +37,7 @@ export default function Achievements() {
                 <li>Winner – International Cenex Award, IIT Bombay</li>
                 <li>Top 3 Teams – The Boardroom Marketing Competition, IIM Calcutta</li>
                 <li>Finalist – Techniche, IIT Guwahati (Northeast India’s largest tech fest)</li>
+                <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li>
               </ul>
             </div>
           </div>
@@ -49,6 +50,7 @@ export default function Achievements() {
                 <li>National Finalist – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)</li>
                 <li>Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)</li>
                 <li>Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)</li>
+                <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
               </ul>
             </div>
           </div>
@@ -60,6 +62,7 @@ export default function Achievements() {
               <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-sm sm:text-base lg:text-lg">
                 <li>Winner – AI Electrify Challenge, Masters' Union</li>
                 <li>Led National AI project on India’s $7B EV market</li>
+                <li>Certificate of Recognition by Loreal in Loreal Brand Storm 2024 for exemplary performance .</li>
               </ul>
             </div>
           </div>
