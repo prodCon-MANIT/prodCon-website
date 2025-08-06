@@ -3,6 +3,7 @@ import web_gradient from '../assets/web_gradient_rev.png';
 import iitBombayImg from '../assets/iit_bombay.png';
 import iimCalcuttaImg from '../assets/iim_calcutta.png';
 import mastersUnionImg from '../assets/masters_union.png';
+import IIT from '../assets/iit.png'
 
 const cardBase = `relative flex flex-col lg:flex-row items-center bg-white/70 backdrop-blur-md border rounded-2xl shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 group`;
 const cardBorder = `border-2 border-transparent bg-clip-padding bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-pink-200/60`;
@@ -51,19 +52,19 @@ export default function Achievements() {
                 <li>Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)</li>
                 <li>Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)</li>
                 <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
-
-              <ul class="list-disc pl-5 space-y-1 text-sm text-gray-800">
-                <li>
-                  <span class="font-medium">National Finalist</span> – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)
-                </li>
-                <li>
-                  Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)
-                </li>
-                <li>
-                  Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)
-                </li>
-
               </ul>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-gray-800">
+                  <li>
+                    <span class="font-medium">National Finalist</span> – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)
+                  </li>
+                  <li>
+                    Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)
+                  </li>
+                  <li>
+                    Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)
+                  </li>
+
+                </ul>
             </div>
           </div>
           {/* Card 3: Industry Innovation Competitions */}
@@ -80,7 +81,7 @@ export default function Achievements() {
           </div>
           {/* 4 Card */}
           <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim} lg:flex-row-reverse`} style={{ animationDelay: '0.5s', animationFillMode: 'backwards' }}>
-            <img src={mastersUnionImg} alt="Masters' Union" className={imgClass} />
+            <img src={IIT} alt="IIT" className={imgClass} />
             <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Product & Consulting Case Competition </h3>
               <ul className="list-disc pl-5 space-y-1 text-sm text-gray-800">
