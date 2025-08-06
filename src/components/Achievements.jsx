@@ -46,12 +46,12 @@ export default function Achievements() {
             <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Case & B-Plan Competitions</h3>
 
-              <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-sm sm:text-base lg:text-lg">
+              {/* <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-sm sm:text-base lg:text-lg">
                 <li>National Finalist – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)</li>
                 <li>Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)</li>
                 <li>Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)</li>
                 <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
-
+              </ul> */}
               <ul class="list-disc pl-5 space-y-1 text-sm text-gray-800">
                 <li>
                   <span class="font-medium">National Finalist</span> – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)
@@ -62,7 +62,7 @@ export default function Achievements() {
                 <li>
                   Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)
                 </li>
-
+                <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
               </ul>
             </div>
           </div>
