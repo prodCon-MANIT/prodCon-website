@@ -68,6 +68,17 @@ export default function Achievements() {
               </ul>
             </div>
           </div>
+          {/* 4 Card */}
+          <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim} lg:flex-row-reverse`} style={{ animationDelay: '0.5s', animationFillMode: 'backwards' }}>
+            <img src={mastersUnionImg} alt="Masters' Union" className={imgClass} />
+            <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Product & Consulting Case Competition </h3>
+              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-800">
+                <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li>
+                <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       {/* Fade-in animation keyframes */}
