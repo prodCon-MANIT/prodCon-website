@@ -222,7 +222,7 @@ export default function TeamMembers() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 px-4">
               Meet Our{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-gradient-x">
-                Team
+                Leadership
               </span>
             </h2>
             <p className="mt-2 sm:mt-3 text-gray-300 text-sm sm:text-base lg:text-lg px-4">The brilliant minds behind Prodcon</p>

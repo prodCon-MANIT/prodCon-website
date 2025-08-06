@@ -90,7 +90,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </h2>
         <p className="text-lg text-white/80 text-center mb-12">
-          Got questions? We've got answers.
+          Questions? We've got answers.
         </p>
         <div className="space-y-6">
           {faqs.map((item, idx) => (
