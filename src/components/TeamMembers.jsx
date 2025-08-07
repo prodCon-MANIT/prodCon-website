@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 // Import team member images
 import adityaRajMantriImg from '../assets/aditya_raj_mantri.jpg';
 import yashSharmaImg from '../assets/yash_sharma.jpg';
+import ankitatyagiImg from '../assets/Ankita_tyagi.jpg';
 import somilPrajapatiImg from '../assets/somil_prajapati.jpg';
 import shayanFahimiImg from '../assets/shayan_fahimi.jpg';
 import smritiShrivastavaImg from '../assets/smriti_shrivastava.jpg';
@@ -61,6 +62,17 @@ export default function TeamMembers() {
         instagram: '#',
         email: 'mailto:kumargautamsingh104@gmail.com',
         linkedin: 'https://www.linkedin.com/in/gautam-kumar104/'
+      }
+    },
+    {
+      name: 'Ankita tyagi',
+      position: 'General Secretary',
+      department: 'Leadership',
+      image: ankitatyagiImg,
+      social: {
+        instagram: '#',
+        email: 'mailto:ankita.tyagi05@gmail.com',
+        
       }
     },
     {
