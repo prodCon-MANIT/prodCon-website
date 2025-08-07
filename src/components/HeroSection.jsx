@@ -41,7 +41,7 @@ function HeroSection() {
 
   return (
     <div
-      className="relative pt-16 min-h-screen w-full bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row text-white overflow-x-hidden"
+      className="relative py-36 md:max-h-max w-full bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row text-white overflow-x-hidden"
       style={{ backgroundImage: `url(${web_gradient})` }}
     >
       {/* Radial glow background effect */}
