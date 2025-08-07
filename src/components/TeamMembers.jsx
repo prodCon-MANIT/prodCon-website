@@ -72,7 +72,7 @@ export default function TeamMembers() {
       social: {
         instagram: '#',
         email: 'mailto:ankita.tyagi05@gmail.com',
-        
+         
       }
     },
     {
