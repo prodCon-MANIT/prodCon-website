@@ -734,7 +734,7 @@ We are building a student-first Community where ideas are tested, challenges are
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Our Guiding Principles: The 3'C
+              Our Principles: The 3'C
             </motion.h2>
 
             <motion.div
