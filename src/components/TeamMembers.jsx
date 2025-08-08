@@ -21,6 +21,7 @@ import gautamKumarImg from '../assets/gautam.jpeg';
 import kushagraTiwariImg from '../assets/kushagra.jpeg';
 import sakshamGuliyaniImg from '../assets/saksham_guliyani.jpg';
 import swatiHansdaImg from '../assets/SWATIP - Swati Hansda.jpg';
+import ankitaTyagiImg from '../assets/ankitaTyagi.jpg';
 
 // Initialize FontAwesome library
 library.add(fab, faLinkedin, faInstagram, faEnvelope);
@@ -61,6 +62,17 @@ export default function TeamMembers() {
         instagram: '#',
         email: 'mailto:kumargautamsingh104@gmail.com',
         linkedin: 'https://www.linkedin.com/in/gautam-kumar104/'
+      }
+    },
+    {
+      name: 'Ankita Tyagi',
+      position: 'General Secretary',
+      department: 'Leadership',
+      image: ankitaTyagiImg,
+      social: {
+        instagram: '#',
+        email: 'mailto:ankita.tyagi05@gmail.com',
+        linkedin: ''
       }
     },
     {
