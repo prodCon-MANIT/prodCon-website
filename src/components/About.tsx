@@ -694,7 +694,7 @@ We are building a student-first Community where ideas are tested, challenges are
             <p style={{
               fontSize: "1.2rem",
               lineHeight: 1.7,
-              textAlign: "center",
+              textAlign: "left",
               maxWidth: "900px",
               margin: "0 auto"
             }}>
@@ -752,10 +752,11 @@ We are building a student-first Community where ideas are tested, challenges are
                 <motion.div
                   key={index}
                   variants={coreValueItem}
+                  className='md:text-center text-left'
                   style={{
                     ...glassCardStyle,
                     padding: "2rem",
-                    textAlign: "center",
+                    
                     position: "relative",
                     overflow: "hidden",
                     border: `1px solid ${value.color}33`,
@@ -801,7 +802,8 @@ We are building a student-first Community where ideas are tested, challenges are
                     marginBottom: "1rem",
                     color: value.color,
                     fontWeight: 700
-                  }}>
+                  }}
+                  className='text-center'>
                     {value.title}
                   </h3>
                   <p style={{

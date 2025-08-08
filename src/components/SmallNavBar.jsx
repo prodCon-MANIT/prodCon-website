@@ -122,7 +122,7 @@ export default function smallNavBar() {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="fixed top-0 left-0 w-80 h-screen bg-blue-950/95 backdrop-blur-md z-40 shadow-2xl"
+            className="fixed top-0 left-0 w-screen h-screen bg-blue-950/95 backdrop-blur-md z-40 shadow-2xl"
           >
             {/* Header Section */}
             <div className="flex items-center justify-between p-6 border-b border-white/20">
