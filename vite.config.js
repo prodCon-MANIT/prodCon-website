@@ -5,7 +5,13 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
+
+  plugins: [ tailwindcss(), react()],
+  server: {
+    host: true, // ← crucial!
+    port: 5173, // optional
+  },
+
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {

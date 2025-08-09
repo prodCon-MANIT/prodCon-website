@@ -22,6 +22,7 @@ import gautamKumarImg from '../assets/gautam.jpeg';
 import kushagraTiwariImg from '../assets/kushagra.jpeg';
 import sakshamGuliyaniImg from '../assets/saksham_guliyani.jpg';
 import swatiHansdaImg from '../assets/SWATIP - Swati Hansda.jpg';
+import ankitaTyagiImg from '../assets/ankitaTyagi.jpg';
 
 // Initialize FontAwesome library
 library.add(fab, faLinkedin, faInstagram, faEnvelope);
@@ -65,6 +66,7 @@ export default function TeamMembers() {
       }
     },
     {
+
       name: 'Ankita tyagi',
       position: 'General Secretary',
       department: 'Leadership',
@@ -72,8 +74,8 @@ export default function TeamMembers() {
       social: {
         instagram: '#',
         email: 'mailto:ankita.tyagi05@gmail.com',
-         
-      }
+    }
+        
     },
     {
       name: 'Saksham Guliyani',
@@ -234,7 +236,7 @@ export default function TeamMembers() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 px-4">
               Meet Our{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-gradient-x">
-                Team
+                Leadership
               </span>
             </h2>
             <p className="mt-2 sm:mt-3 text-gray-300 text-sm sm:text-base lg:text-lg px-4">The brilliant minds behind Prodcon</p>
