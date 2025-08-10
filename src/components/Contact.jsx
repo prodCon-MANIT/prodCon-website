@@ -103,29 +103,34 @@ function Contact() {
         style={{ backgroundImage: `url(${web_gradient})` }}
       >
 
-        <div className="w-full px-4">
-          <div className="bg-white rounded-xl md:p-4 p-3 flex flex-col md:flex-row items-center md:items-center justify-between space-y-4 md:space-y-0 md:space-x-6 max-w-3xl mx-auto mt-10 md:mt-16">
-            <h2 className="text-lg md:text-2xl font-bold text-black text-center md:text-left">
-              <span className="block sm:hidden">Become our Sponsor</span>
-              <span className="hidden sm:block">
-                Become our <br />Sponsor
-              </span>
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full sm:w-auto bg-gray-100 rounded-lg  border border-gray-300">
+        <div className="w-full px-2">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 flex flex-col md:flex-row items-center justify-between p-2 md:p-4 max-w-4xl mx-auto mt-16 md:mt-28">
+
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Become our <span className="text-purple-700">Sponsor</span>
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base mt-2">
+                Support our mission and grow with us.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center w-full md:w-auto bg-gray-50 rounded-lg border border-gray-300 overflow-hidden shadow-sm mt-3 md:mt-0">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="Enter your email"
                 required
-                className="flex-1 px-5 py-3 mb-4 md:mb-0 bg-transparent placeholder-gray-500 focus:outline-none text-gray-700 text-sm md:text-base w-full sm:w-auto "
+                className="flex-1 px-4 py-3 bg-transparent placeholder-gray-500 text-gray-800 text-sm md:text-base focus:outline-none"
               />
               <button
-                className="mt-2 sm:mt-0 sm:ml-2 bg-amber-400 text-white px-2 sm:px-5 sm:py-3 md:py-0 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-purple-700 transition-colors w-full sm:w-auto"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-sm md:text-base font-medium transition-colors w-full sm:w-auto"
               >
-                SUBMIT
+                Submit
               </button>
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Location Section */}

@@ -122,13 +122,13 @@ export default function LargeNavBar() {
               <li key={i} className="relative group">
                 <button
                   className={`relative z-10 px-5 py-2 rounded-3xl transition duration-300 focus:outline ${
-                    isActive ? "text-purple-600" : "text-white"
+                    isActive ? "text-white" : "text-white"
                   }`}
                   onClick={onClick}
                 >
                   {label}
                 </button>
-                <div className="absolute inset-1 border-solid-1px opacity-1 group-hover:opacity-100 transition duration-300 blur-md bg-gradient-to-r from-purple-600 to-purple-400" />
+                <div className="absolute inset-1 border-solid-1px opacity-1 group-hover:opacity-100 transition duration-300 blur-md bg-gradient-to-r from-purple-600 to-purple-400 text-white" />
               </li>
             );
           })}
