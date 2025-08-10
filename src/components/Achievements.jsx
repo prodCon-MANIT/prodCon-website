@@ -37,7 +37,7 @@ export default function Achievements() {
                 <li>Winner – International Cenex Award, IIT Bombay</li>
                 <li>Top 3 Teams – The Boardroom Marketing Competition, IIM Calcutta</li>
                 <li>Finalist – Techniche, IIT Guwahati (Northeast India’s largest tech fest)</li>
-                <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li>
+                {/* <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li> */}
               </ul>
             </div>
           </div>
