@@ -18,7 +18,7 @@ import rahulHazraImg from '../assets/rahul_hazra.jpg';
 import tanishqSardaImg from '../assets/tanishq_sarda.jpg';
 import priyanshKashyapImg from '../assets/priyansh_kashyap.jpg';
 import gautamKumarImg from '../assets/gautam.jpeg';
-import kushagraTiwariImg from '../assets/kushagra.jpeg';
+import kushagraTiwariImg from '../assets/kushagraTiwariImg.jpg';
 import sakshamGuliyaniImg from '../assets/saksham_guliyani.jpg';
 import swatiHansdaImg from '../assets/SWATIP - Swati Hansda.jpg';
 import ankitaTyagiImg from '../assets/ankitaTyagi.jpg';
@@ -66,7 +66,7 @@ export default function TeamMembers() {
     },
     {
       name: 'Ankita Tyagi',
-      position: 'General Secretary',
+      position: 'Mentor',
       department: 'Leadership',
       image: ankitaTyagiImg,
       social: {
