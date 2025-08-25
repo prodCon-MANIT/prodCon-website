@@ -76,6 +76,7 @@ export default function smallNavBar() {
       onClick: () => {
         closeMenu();
         navigate("/about");
+        window.scrollTo({ top: 0, behavior: 'smooth' })
       }
     },
     {

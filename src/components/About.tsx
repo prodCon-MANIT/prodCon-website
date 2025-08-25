@@ -638,6 +638,7 @@ We are building a student-first Community where ideas are tested, challenges are
           position: "relative",
           zIndex: 2,
         }}
+        
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <motion.div
@@ -646,6 +647,7 @@ We are building a student-first Community where ideas are tested, challenges are
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             style={{ textAlign: "center", marginBottom: "4rem" }}
+            id='about'
           >
             <motion.h1
               style={{
