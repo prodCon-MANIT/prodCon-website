@@ -79,6 +79,15 @@ export default function LargeNavBar() {
       },
       path: "/contact",
     },
+    {
+      label: "NDRF Dashboard",
+      onClick: () => {
+        navigate("/ndrf");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setActiveSection("");
+      },
+      path: "/ndrf",
+    },
   ];
 
   return (

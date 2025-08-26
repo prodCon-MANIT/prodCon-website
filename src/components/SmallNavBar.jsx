@@ -85,6 +85,13 @@ export default function smallNavBar() {
         closeMenu();
         navigate("/contact");
       }
+    },
+    {
+      label: "NDRF Dashboard",
+      onClick: () => {
+        closeMenu();
+        navigate("/ndrf");
+      }
     }
   ];
 
