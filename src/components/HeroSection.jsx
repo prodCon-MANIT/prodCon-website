@@ -159,6 +159,7 @@ function HeroSection() {
                 "Driven by Ideas, Defined by Impact",
               ]}
             />
+            
 
             <p className="mt-6 mb-6 text-base sm:text-lg leading-relaxed text-justify text-white/90">
               Welcome to the ProdCon — <strong>Product and Consulting Club</strong> of MANIT Bhopal —
