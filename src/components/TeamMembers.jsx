@@ -78,7 +78,7 @@ export default function TeamMembers() {
     
     {
       name: 'Saksham Guliyani',
-      position: 'Head of Product',
+      position: 'General Secretary & Head of Product',
       department: 'Product',
       image: sakshamGuliyaniImg,
       social: {
