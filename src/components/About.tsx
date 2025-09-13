@@ -700,8 +700,9 @@ We are building a student-first Community where ideas are tested, challenges are
               maxWidth: "900px",
               margin: "0 auto"
             }}>
-              The Product & Consulting Club at NIT Bhopal, widely known as ProdCon, is a premier student-led initiative dedicated to building and nurturing future leaders in Product Management and Consulting.
+              The Product & Consulting Club at NIT Bhopal, widely known as ProdCon, is a premier student-led initiative dedicated to building and nurturing future leaders in product management and consulting.
               We aim to create a high-impact learning ecosystem that offers students real-world exposure, accelerates professional growth, and fosters the development of structured problem-solving, strategic thinking, and decision-making skills.
+
             </p>
           </motion.div>
 
@@ -753,7 +754,7 @@ We are building a student-first Community where ideas are tested, challenges are
               {coreValues.map((value, index) => (
                 <motion.div
                   key={index}
-                  variants={coreValueItem}
+                 
                   className='md:text-center text-left'
                   style={{
                     ...glassCardStyle,

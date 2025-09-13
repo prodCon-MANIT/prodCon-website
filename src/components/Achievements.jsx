@@ -70,7 +70,6 @@ export default function Achievements() {
               <ul className="list-disc pl-5 space-y-1  text-gray-800">
                 <li>Winner – AI Electrify Challenge, Masters' Union</li>
                 <li>Led National AI project on India’s $7B EV market</li>
-                <li>Certificate of Recognition by Loreal in Loreal Brand Storm 2024 for exemplary performance .</li>
               </ul>
             </div>
           </div>
@@ -82,6 +81,7 @@ export default function Achievements() {
               <ul className="list-disc pl-5 space-y-1  text-gray-800">
                 <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li>
                 <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
+                <li>Certificate of Recognition by Loreal in Loreal Brand Storm 2024 for exemplary performance .</li>
               </ul>
             </div>
           </div>

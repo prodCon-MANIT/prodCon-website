@@ -159,14 +159,16 @@ function HeroSection() {
                 "Driven by Ideas, Defined by Impact",
               ]}
             />
+            
 
             <p className="mt-6 mb-6 text-base sm:text-lg leading-relaxed text-justify text-white/90">
-              Welcome to the <strong>Product and Consulting Club</strong> of MANIT Bhopal —
+              Welcome to the ProdCon — <strong>Product and Consulting Club</strong> of MANIT Bhopal —
               where <span className="text-purple-300 font-medium">ideas meet industry</span>.
-              We bridge academic knowledge with real‐world consulting and product management skills.
-              Our initiatives include <strong>case studies</strong>, <strong>guesstimates</strong> and <strong>mock interviews</strong>.
-              Flagship events like  foster strategic thinking and business insight.
-              Join us to shape your <span className="text-indigo-300 font-medium">journey from campus to corporate</span>.
+              We bridge academic knowledge with real-world product management and consulting exposure.
+              Our initiatives include <strong>case studies</strong>, <strong>guesstimates</strong>, <strong>mock interviews</strong>  <strong>& real world problem exposure. </strong>
+              We partners with <strong>NGOs, startups & business </strong>
+              Flagship events like <strong> NirmAn </strong> & more upcoming are designed to foster strategic thinking, market insight, and business acumen to the students. Join us to shape your journey from campus to the corporate world.
+             <span className="text-indigo-300 font-medium"> journey from campus to corporate</span>.
             </p>
 
 
