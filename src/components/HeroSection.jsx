@@ -72,11 +72,29 @@ function HeroSection() {
             ))}
           </span>
         </h1>
-        <p className="text-xl sm:text-2xl lg:text-3xl mb-1 text-center sm:text-left">
+        <p className="text-xl sm:text-2xl lg:text-3xl mb-6 text-center sm:text-left">
           The Product & Consulting{" "}
           <br className="sm:hidden" />
           Club of NIT-Bhopal
         </p>
+        
+        {/* Brochure Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex justify-center sm:justify-start"
+        >
+          <a
+            href="https://drive.google.com/file/d/1l4A9mHgrlD2b-SuR34R9GLdGFws-Mfh7/view?usp=drive_link"
+            className="relative overflow-hidden flex justify-center items-center bg-gradient-to-r from-[#382FCC] to-[#4C3AE6] text-base sm:text-xl text-white font-semibold px-6 sm:px-8 py-3 rounded-full shadow-lg shadow-purple-900/30 hover:shadow-xl hover:shadow-purple-900/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2b27a5] to-[#3a2db8] opacity-0 hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10 flex items-center gap-2">
+              📄 Download Brochure
+            </span>
+          </a>
+        </motion.div>
       </motion.section>
 
       {/* Right Section */}
