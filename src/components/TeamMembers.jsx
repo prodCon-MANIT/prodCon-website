@@ -109,17 +109,17 @@ export default function TeamMembers() {
         linkedin: 'https://www.linkedin.com/in/aditya-raj-mantri-868013267'
       }
     },
-    {
-      name: 'Swati Hansda',
-      position: 'Research & Content Head (Product)',
-      department: 'Product',
-      image: swatiHansdaImg,
-      social: {
-        instagram: '#',
-        email: 'mailto:swatihansda1505@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/'
-      }
-    },
+    // {
+    //   name: 'Swati Hansda',
+    //   position: 'Research & Content Head (Product)',
+    //   department: 'Product',
+    //   image: swatiHansdaImg,
+    //   social: {
+    //     instagram: '#',
+    //     email: 'mailto:swatihansda1505@gmail.com',
+    //     linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/'
+    //   }
+    // },
     {
       name: 'Yash Sharma',
       position: 'Research & Content Head (Consulting)',
@@ -131,17 +131,17 @@ export default function TeamMembers() {
         linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
       }
     },
-    {
-      name: 'Smriti Shrivastava',
-      position: 'Treasurer',
-      department: 'Finance',
-      image: smritiShrivastavaImg,
-      social: {
-        instagram: '#',
-        email: 'mailto:smriti.shrivastava130304@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
-      }
-    },
+    // {
+    //   name: 'Smriti Shrivastava',
+    //   position: 'Treasurer',
+    //   department: 'Finance',
+    //   image: smritiShrivastavaImg,
+    //   social: {
+    //     instagram: '#',
+    //     email: 'mailto:smriti.shrivastava130304@gmail.com',
+    //     linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    //   }
+    // },
     {
       name: 'Ankit Kumar Yadav',
       position: 'Technical Head',

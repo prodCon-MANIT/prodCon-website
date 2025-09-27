@@ -198,7 +198,7 @@ function Contact() {
                     </div>
                     <div>
                       <p className="text-purple-300 font-medium text-m">Saksham Guliyani</p>
-                      <a href="tel:+918962270969" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">+91 89622 70969</a>
+                      <a href="tel:+919462945410" className="text-gray-300 text-sm hover:text-purple-400 transition-colors">+91 94629 45410</a>
                     </div>
                   </div>
                 </div>
