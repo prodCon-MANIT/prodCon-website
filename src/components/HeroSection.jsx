@@ -86,7 +86,7 @@ function HeroSection() {
           className="flex justify-center sm:justify-start"
         >
           <a
-            href="https://drive.google.com/file/d/1l4A9mHgrlD2b-SuR34R9GLdGFws-Mfh7/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1l4A9mHgrlD2b-SuR34R9GLdGFws-Mfh7/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
             className="relative overflow-hidden flex justify-center items-center bg-gradient-to-r from-[#382FCC] to-[#4C3AE6] text-base sm:text-xl text-white font-semibold px-6 sm:px-8 py-3 rounded-full shadow-lg shadow-purple-900/30 hover:shadow-xl hover:shadow-purple-900/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#2b27a5] to-[#3a2db8] opacity-0 hover:opacity-100 transition-opacity duration-300" />
