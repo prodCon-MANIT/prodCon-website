@@ -15,6 +15,14 @@ const eventsData = [
     // registerLink: "https://www.google.co.in/",
     gradient: "from-purple-500/50 to-green-300",
   },
+  {
+    title: "CaseCraft - Consulting Case Competition",
+    image: "/casecraft.jpeg",
+    description:
+      "Ready to think like a consultant and solve real world business problems? CaseCraft is here to test your strategy, analytics, and problem solving skills!",
+    registerLink: "https://unstop.com/o/VfFQprH?lb=tLh6SlpN&utm_medium=Share&utm_source=shreesin3855&utm_campaign=Competitions",
+    gradient: "from-blue-500/50 to-cyan-300",
+  },
   
 ];
 
@@ -104,7 +112,11 @@ const settings = {
                       {event.title}
                     </h3>
                     <p className="text-sm mb-5">{event.description}</p>
-                    {event.registerLink && (
+                  </div>
+
+                  {/* Register button - always visible */}
+                  {event.registerLink && (
+                    <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center">
                       <a
                         href={event.registerLink}
                         target="_blank"
@@ -116,9 +128,8 @@ const settings = {
                       >
                         Register
                       </a>
-
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
