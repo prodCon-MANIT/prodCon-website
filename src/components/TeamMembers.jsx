@@ -87,17 +87,17 @@ export default function TeamMembers() {
         linkedin: 'https://www.linkedin.com/in/guliyanisaksham'
       }
     },
-    {
-      name: 'Tanishq Sarda',
-      position: 'Head of Consulting',
-      department: 'Consulting',
-      image: tanishqSardaImg,
-      social: {
-        instagram: '#',
-        email: 'mailto:Sardatanishq@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/sardatanishq'
-      }
-    },
+    // {
+    //   name: 'Tanishq Sarda',
+    //   position: 'Head of Consulting',
+    //   department: 'Consulting',
+    //   image: tanishqSardaImg,
+    //   social: {
+    //     instagram: '#',
+    //     email: 'mailto:Sardatanishq@gmail.com',
+    //     linkedin: 'https://www.linkedin.com/in/sardatanishq'
+    //   }
+    // },
     {
       name: 'Aditya Raj Mantri',
       position: 'Overall Coordinator',
@@ -153,17 +153,17 @@ export default function TeamMembers() {
         linkedin: 'https://www.linkedin.com/in/ankit-kumar-1065b3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
       }
     },
-    {
-      name: 'Shayan Fahimi',
-      position: 'Sponsorship Secretary',
-      department: 'Sponsorship',
-      image: shayanFahimiImg,
-      social: {
-        instagram: '#',
-        email: 'mailto:msfxinfinity@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245'
-      }
-    },
+    // {
+    //   name: 'Shayan Fahimi',
+    //   position: 'Sponsorship Secretary',
+    //   department: 'Sponsorship',
+    //   image: shayanFahimiImg,
+    //   social: {
+    //     instagram: '#',
+    //     email: 'mailto:msfxinfinity@gmail.com',
+    //     linkedin: 'https://www.linkedin.com/in/shayan-fahimi-82566b245'
+    //   }
+    // },
     {
       name: 'Somil Prajapati',
       position: 'Logistics & Ops Secretary',
