@@ -1,11 +1,48 @@
 @import "tailwindcss";
-@import './custom.css';
 
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.6; }
+:root {
+  --brand-purple: #8b5cf6;
+  --bg-dark: #090613;
+  --bg-dark-2: #120a24;
 }
 
-.glow-animate {
-  animation: glowPulse 1.6s ease-in-out infinite;
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.18), transparent 35%),
+    radial-gradient(circle at 90% 25%, rgba(99, 102, 241, 0.14), transparent 35%),
+    radial-gradient(circle at 70% 85%, rgba(217, 70, 239, 0.08), transparent 30%),
+    linear-gradient(135deg, var(--bg-dark) 0%, #0c0718 45%, var(--bg-dark-2) 100%);
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-mesh {
+  background-attachment: fixed;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(192, 38, 211, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(67, 56, 202, 0.05) 0px, transparent 50%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(2, 1, 10, 0.35);
+}
+
+.glass-card-hover {
+  transition: all 0.5s ease;
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.1);
+}
+
+.site-theme {
+  min-height: 100vh;
+  color: white;
 }

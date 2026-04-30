@@ -1,34 +1,33 @@
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar'
-import About from './components/About.tsx';
-import Contact from './components/Contact';
+import NavBar from './components/NavBar';
 import Home from './components/Home';
-import { LoaderTwo } from './components/LoaderOne.jsx';
-import { useEffect,useState } from 'react';
-import EarthLoader from './components/EarthLoader.jsx';
+import About from './components/About';
+import Contact from './components/Contact';
+import { LoaderTwo } from './components/LoaderOne';
 
 function App() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3700);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
-    if (loading) {
-    return <LoaderTwo/>;
-  }
+
+  if (loading) return <LoaderTwo />;
 
   return (
-    < >
+    <div className="site-theme bg-mesh selection:bg-purple-500/30">
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </>
-  )
+      <main className="relative z-10">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

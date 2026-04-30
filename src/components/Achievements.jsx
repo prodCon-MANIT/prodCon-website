@@ -1,101 +1,71 @@
 import React from 'react';
-import web_gradient from '../assets/web_gradient_rev.png';
-import iitBombayImg from '../assets/iit_bombay.png';
-import iimCalcuttaImg from '../assets/iim_calcutta.png';
-import mastersUnionImg from '../assets/masters_union.png';
-import IIT from '../assets/iit.png'
+import { motion } from 'framer-motion';
+import { Trophy, Star, Award, Zap } from 'lucide-react';
 
-const cardBase = `relative flex flex-col lg:flex-row items-center bg-white/70 backdrop-blur-md border rounded-2xl shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 group`;
-const cardBorder = `border-2 border-transparent bg-clip-padding bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-pink-200/60`;
-const cardOverlay = `before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/40 before:to-white/10 before:pointer-events-none before:rounded-2xl`;
-const cardAnim = `animate-fadein`;
-const imgClass = `w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 m-4 rounded-full object-cover bg-white/80 flex-shrink-0`;
+const achievementData = [
+  {
+    category: "Top National Recognition",
+    icon: Trophy,
+    color: "text-yellow-500",
+    list: [
+      "Winner – International Cenex Award, IIT Bombay",
+      "Top 3 Teams – The Boardroom Competition, IIM Calcutta",
+      "Finalist – Techniche, IIT Guwahati"
+    ]
+  },
+  {
+    category: "B-Plan Competitions",
+    icon: Star,
+    color: "text-blue-500",
+    list: [
+      "National Finalist – Pitch Perfect, IIT Bombay",
+      "Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi",
+      "Top 8 – Disrupt, XLRI Jamshedpur"
+    ]
+  },
+  {
+    category: "Innovation & PM",
+    icon: Zap,
+    color: "text-purple-500",
+    list: [
+      "Winner – AI Electrify Challenge, Masters' Union",
+      "2nd Runner Up – Produscope 2024, IIT-G",
+      "Top 10 – Product Breakdown, IIT Indore"
+    ]
+  }
+];
 
 export default function Achievements() {
   return (
-    <section
-      id="achievements-section"
-      className="w-full mx-auto bg-cover bg-center relative flex flex-col items-center justify-center min-h-screen select-none"
-      style={{ backgroundImage: `url(${web_gradient})` }}
-    >
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 flex flex-col items-center justify-center">
-
-        <h1 className="text-5xl text-center font-bold text-white mb-4">Our Achievements</h1>
-        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 lg:mb-10 px-4">
-          <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-          <span className="text-white/90 text-lg sm:text-base lg:text-lg font-light">Highlights</span>
-          <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-        </div>
-        <div className="space-y-8 sm:space-y-10 lg:space-y-14 w-full">
-          {/* Card 1: Top National & International Recognition */}
-          <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim}`} style={{ animationDelay: '0.1s', animationFillMode: 'backwards' }}>
-            <img src={iitBombayImg} alt="IIT Bombay" className={imgClass} />
-            <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Top National & International Recognition</h3>
-              <ul className="list-disc pl-5 space-y-1  text-gray-800">
-                <li>Winner – International Cenex Award, IIT Bombay</li>
-                <li>Top 3 Teams – The Boardroom Marketing Competition, IIM Calcutta</li>
-                <li>Finalist – Techniche, IIT Guwahati (Northeast India’s largest tech fest)</li>
-                {/* <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li> */}
-              </ul>
-            </div>
-          </div>
-          {/* Card 2: Case & B-Plan Competitions (zigzag) */}
-          <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim} lg:flex-row-reverse`} style={{ animationDelay: '0.3s', animationFillMode: 'backwards' }}>
-            <img src={iimCalcuttaImg} alt="IIM Calcutta" className={imgClass} />
-            <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Case & B-Plan Competitions</h3>
-
-            
-                <ul class="list-disc pl-5 space-y-1  text-gray-800">
-                  <li>
-                    <span class="font-medium">National Finalist</span> – Pitch Perfect, IIT Bombay (Top 10 out of 1000+ participants)
-                  </li>
-                  <li>
-                    Top 15 – Xpanse B-Plan, IIT (BHU) Varanasi (800+ teams)
-                  </li>
-                  <li>
-                    Top 8 – Disrupt, XLRI Jamshedpur (1,200+ entries)
-                  </li>
-
-                </ul>
-            </div>
-          </div>
-          {/* Card 3: Industry Innovation Competitions */}
-          <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim}`} style={{ animationDelay: '0.5s', animationFillMode: 'backwards' }}>
-            <img src={mastersUnionImg} alt="Masters' Union" className={imgClass} />
-            <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Industry Innovation Competitions</h3>
-              <ul className="list-disc pl-5 space-y-1  text-gray-800">
-                <li>Winner – AI Electrify Challenge, Masters' Union</li>
-                <li>Led National AI project on India’s $7B EV market</li>
-              </ul>
-            </div>
-          </div>
-          {/* 4 Card */}
-          <div className={`${cardBase} ${cardBorder} ${cardOverlay} ${cardAnim} lg:flex-row-reverse`} style={{ animationDelay: '0.5s', animationFillMode: 'backwards' }}>
-            <img src={IIT} alt="IIT" className={imgClass} />
-            <div className="p-4 sm:p-6 lg:p-8 flex-1 w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 mb-3 sm:mb-4 border-b-2 border-purple-200 pb-2 font-sans tracking-tight drop-shadow-sm">Product & Consulting Case Competition </h3>
-              <ul className="list-disc pl-5 space-y-1  text-gray-800">
-                <li>2nd Runner Up, Produscope 2024 ( Nationwide PM Competition by E-cell IIT-G,1K+ Participants)</li>
-                <li>Top 10, Product Breakdown ( National Product Competition by E-cell IIT - Indore,800+ Participants)</li>
-                <li>Certificate of Recognition by Loreal in Loreal Brand Storm 2024 for exemplary performance .</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <section className="py-24 px-6 max-w-7xl mx-auto">
+      <div className="flex flex-col items-center text-center mb-20 space-y-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Our Achievements</h2>
+        <div className="h-1.5 w-24 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full" />
       </div>
-      {/* Fade-in animation keyframes */}
-      <style>{`
-        @keyframes fadein {
-          0% { opacity: 0; transform: translateY(40px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadein { animation: fadein 1s cubic-bezier(.4,0,.2,1) both; }
-      `}</style>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {achievementData.map((group, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.1 }}
+            viewport={{ once: true }}
+            className="glass-card p-8 rounded-[2rem] border-t-2 border-t-purple-500/20 group hover:border-t-purple-500 transition-all duration-500"
+          >
+            <group.icon className={`w-10 h-10 ${group.color} mb-6`} />
+            <h3 className="text-xl font-bold mb-6 text-white">{group.category}</h3>
+            <ul className="space-y-4">
+              {group.list.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
-

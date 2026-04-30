@@ -1,145 +1,79 @@
-
-
-import web_gradient from "../assets/web_gradient_rev.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import event1 from "../assets/event1.jpg";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ExternalLink, Calendar } from 'lucide-react';
+import event1 from '../assets/event1.jpg';
 
 const eventsData = [
   {
     title: "Product Management Bootcamp",
     image: event1,
-    description:
-      "We recently organized the Summer of Product workshop in collaboration with HelloPM, led by Ankit Shukla, offering hands-on learning, real-world product insights, and guidance for aspiring product managers.",
-    // registerLink: "https://www.google.co.in/",
-    gradient: "from-purple-500/50 to-green-300",
+    description: "Hands-on Summer of Product workshop with HelloPM, led by Ankit Shukla.",
+    tag: "Workshop",
+    gradient: "from-purple-500 to-indigo-600",
   },
   {
-    title: "CaseCraft - Consulting Case Competition",
+    title: "CaseCraft Competition",
     image: "/casecraft.jpeg",
-    description:
-      "Ready to think like a consultant and solve real world business problems? CaseCraft is here to test your strategy, analytics, and problem solving skills!",
-    registerLink: "https://unstop.com/o/VfFQprH?lb=tLh6SlpN&utm_medium=Share&utm_source=shreesin3855&utm_campaign=Competitions",
-    gradient: "from-blue-500/50 to-cyan-300",
+    description: "Real-world consulting cases to test strategy, analytics, and problem-solving.",
+    tag: "Competition",
+    gradient: "from-blue-500 to-cyan-500",
   },
-  
 ];
 
 const Events = () => {
-const settings = {
-  dots: false,
-  infinite: eventsData.length > 3,
-  speed: 400,
-  slidesToShow: Math.min(3, eventsData.length),
-  slidesToScroll: 1,
-  arrows: true,
-  centerMode: eventsData.length > 1,
-  centerPadding: "0px",
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: Math.min(2, eventsData.length),
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
-
   return (
-    <section
-      id="event-section"
-      className="w-full mx-auto bg-cover bg-center relative flex flex-col items-center justify-center select-none"
-      style={{ backgroundImage: `url(${web_gradient})` }}
-    >
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="text-center m-20 mb-5 sm:mb-0 z-10">
-        <h1 className="text-6xl font-bold text-white mb-4">Our Events</h1>
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-          <span className="text-white/90 text-lg font-light">From Ideas to Impact</span>
-          <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+    <section id="event-section" className="py-24 px-6 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="space-y-4">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Our <span className="text-purple-600">Events</span></h2>
+          <p className="text-gray-400 text-xl max-w-md">From raw ideas to measurable impact. Join our flagship sessions.</p>
         </div>
+        <div className="h-px flex-grow bg-white/10 mx-8 hidden md:block mb-4" />
       </div>
 
-      <div className="w-[85%] max-w-6xl z-20 relative py-10">
-        <Slider {...settings}>
-          {eventsData.map((event, idx) => (
-            <div key={idx} className="px-3">
-              <div className="group relative flex justify-center items-center">
-                <div
-                  className={`group w-[240px] sm:w-[240px] md:w-[280px] lg:w-[300px] h-[300px] sm:h-[300px] md:h-[380px] lg:h-[400px] relative rounded-2xl 
-                  shadow-[1px_7px_28px_-12px_rgba(0,0,0,0.75)] overflow-hidden 
-                  bg-purple-900/30 cursor-pointer transition-transform duration-400 ease-in-out`}
-                >
-                  {/* Gradient overlay on hover */}
-                  <div
-                    className={`absolute inset-0 z-5 bg-gradient-to-t ${event.gradient} 
-                    opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none`}
-                  ></div>
+      <div className="grid gap-8 md:grid-cols-2">
+        {eventsData.map((event, idx) => (
+          <motion.div
+            key={idx}
+            whileHover={{ y: -10 }}
+            className="glass-card group flex h-full flex-col overflow-hidden rounded-[2.5rem]"
+          >
+            <div className={`relative bg-gradient-to-br p-5 sm:p-6 ${event.gradient}`}>
+              <div className="mb-4 w-fit rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">
+                {event.tag}
+              </div>
 
-                  {/* Image Container */}
-                  <div className="absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden z-0">
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-full object-contain sm:object-cover rounded-2xl"
-                      style={{
-                        objectPosition: 'center center',
-                        minHeight: '100%',
-                        minWidth: '100%'
-                      }}
-                      onError={(e) =>
-                        console.log("Image failed to load, using placeholder") ||
-                        (e.target.src =
-                          "https://dummyimage.com/350x350/000000/392359&text=350x350")
-                      }
-                    />
-                  </div>
-
-                  {/* Text content - hidden until hover */}
-                  <div
-                    className="absolute z-20 px-6 text-white font-bold text-center transition-all duration-500 translate-y-0
-                    opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-2xl"
-                  >
-                    <h3 className="text-2xl font-semibold mb-2 sm:mt-10 md:mt-20">
-                      {event.title}
-                    </h3>
-                    <p className="text-sm mb-5">{event.description}</p>
-                  </div>
-
-                  {/* Register button - always visible */}
-                  {event.registerLink && (
-                    <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center">
-                      <a
-                        href={event.registerLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block px-6 py-2 rounded-full font-bold text-sm text-[#eee] bg-[#2A2772f3]
-                          border border-white/30 shadow-[0px_10px_20px_rgba(0,0,0,0.2)] 
-                          transition-all duration-300 ease-in-out
-                          hover:animate-pulse hover:bg-[#1c1a4d]"
-                      >
-                        Register
-                      </a>
-                    </div>
-                  )}
+              <div className="relative mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl border border-white/20 bg-black/20 p-2">
+                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-xl bg-black/30">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </div>
+              <Calendar className="w-10 h-10 text-white/20 absolute bottom-4 right-4" />
             </div>
-          ))}
-        </Slider>
+            
+            <div className="flex flex-grow flex-col p-8">
+              <h3 className="mb-4 text-2xl font-bold transition-colors group-hover:text-purple-400">{event.title}</h3>
+              <p className="mb-8 flex-grow text-sm leading-relaxed text-gray-400">{event.description}</p>
+              
+              {event.registerLink && (
+                <a 
+                  href={event.registerLink}
+                  className="flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 py-4 text-center text-sm font-bold transition-all hover:bg-white hover:text-black"
+                >
+                  Register Now <ExternalLink size={16} />
+                </a>
+              )}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
 };
 
-
 export default Events;
-

@@ -1,107 +1,71 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiChevronDown } from "react-icons/hi";
-import web_gradient_rev from '../assets/web_gradient_rev.png'
+import { ChevronDown } from "lucide-react";
+
+const faqs = [
+  {
+    question: "What kind of activities/events does ProdCon conduct?",
+    answer:
+      "At ProdCon, we host engaging and hands-on sessions such as Guesstimates workshops, market entry strategy simulations, design sprints, and product teardown workshops , all designed to mimic real-world Product management and Consulting practices.Additionally we have initiatives like NirmAn especially for ProdCon members."
+  },
+  {
+    question: "Is there any  prior knowledge required to join ProdCon ?",
+    answer:
+      "Not at all. We welcome students who are eager to learn and want to make an impact. Our beginner-friendly sessions help members build skills first in product thinking, business strategy, and Consulting frameworks , especially through our training initiative called NirmAn."
+  },
+  {
+    question: "How does ProdCon help with placements?",
+    answer:
+      "We conduct mock interviews, resume workshops, and Case Interview prep cohorts to prepare members for roles in Product, Consulting, and Strategy. Many of our mentors are leading Product at  top firms like Flipkart, Amazon, and Microsoft & have experience in business Consulting at MBBs of World."
+  },
+];
 
 const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const chevronTransition = { type: "spring", stiffness: 300, damping: 30 };
-  const panelTransition = { type: "spring", stiffness: 300, damping: 30 };
-
   return (
-    <motion.div
-      layout
-      initial={false}
-      className="mb-4 rounded-2xl overflow-hidden bg-white/90 backdrop-blur-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-    >
+    <div className="border-b border-white/5 last:border-0 overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full flex items-center justify-between p-5 transition-colors duration-300 ${
-          isOpen ? 'bg-indigo-50' : 'hover:bg-gray-50'
-        }`}
+        className="w-full py-8 flex items-center justify-between text-left group"
       >
-        <span className="text-xl font-semibold text-gray-800 pr-4">{question}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={chevronTransition}
-          className={`flex-shrink-0 ${isOpen ? 'text-indigo-600' : 'text-gray-400'}`}
-        >
-          <HiChevronDown size={24} />
-        </motion.div>
+        <span className={`text-xl font-bold transition-colors ${isOpen ? 'text-purple-500' : 'text-white group-hover:text-purple-400'}`}>
+          {question}
+        </span>
+        <ChevronDown className={`transition-transform duration-300 text-gray-500 ${isOpen ? 'rotate-180 text-purple-500' : ''}`} />
       </button>
-
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
-            key="content"
             initial={{ height: 0, opacity: 0 }}
-            animate={{ 
-              height: "auto", 
-              opacity: 1,
-              transition: { duration: 0.3, ease: "easeOut" }
-            }}
-            exit={{ 
-              height: 0, 
-              opacity: 0,
-              transition: { duration: 0.2, ease: "easeIn" }
-            }}
-            transition={panelTransition}
-            className="overflow-hidden"
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="p-6 pt-0 text-gray-600 text-lg leading-relaxed border-t border-gray-100">
+            <p className="pb-8 text-gray-400 leading-relaxed text-lg max-w-3xl">
               {answer}
-            </div>
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 };
 
-export default function FAQ() {
-  const faqs = [
-    {
-      question: "What kind of activities/events does ProdCon conduct?",
-      answer:
-      "At ProdCon, we host engaging and hands-on sessions such as Guesstimates workshops, market entry strategy simulations, design sprints, and product teardown workshops , all designed to mimic real-world Product management and Consulting practices.Additionally we have initiatives like NirmAn especially for ProdCon members."
-    },
-    {
-      question: "Is there any  prior knowledge required to join ProdCon ?",
-      answer:
-        "Not at all. We welcome students who are eager to learn and want to make an impact. Our beginner-friendly sessions help members build skills first in product thinking, business strategy, and Consulting frameworks , especially through our training initiative called NirmAn."
-    },
-    {
-      question: "How does ProdCon help with placements?",
-      answer: "We conduct mock interviews, resume workshops, and Case Interview prep cohorts to prepare members for roles in Product, Consulting, and Strategy. Many of our mentors are leading Product at  top firms like Flipkart, Amazon, and Microsoft & have experience in business Consulting at MBBs of World."
-    }
-  ];
-
+const FAQ = () => {
   return (
-    <div className="relative w-full py-16 px-4 sm:px-6 lg:px-8"
-      style={{ 
-        backgroundImage: `url(${web_gradient_rev})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-2 text-center">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-lg text-white/80 text-center mb-12">
-          Questions? We've got answers.
-        </p>
-        <div className="space-y-6">
-          {faqs.map((item, idx) => (
-            <AccordionItem
-              key={idx}
-              question={item.question}
-              answer={item.answer}
-            />
-          ))}
-        </div>
+    <section className="py-24 px-6 max-w-5xl mx-auto">
+      <div className="space-y-4 mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Got <span className="text-purple-600">Questions?</span></h2>
+        <p className="text-gray-500 text-xl italic">Answers for the strategically curious.</p>
       </div>
-    </div>
+      <div className="glass-card p-8 md:px-12 rounded-[3rem]">
+        {faqs.map((faq, idx) => (
+          <AccordionItem key={idx} {...faq} />
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default FAQ;

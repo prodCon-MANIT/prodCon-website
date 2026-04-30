@@ -1,103 +1,67 @@
-import { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Github, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 
-export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [Subscribed , setSubscribed] = useState('Subscribe');
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: handle newsletter signup
-    
-    setEmail('');
-    setSubscribed("Subscribed");
-    setTimeout(()=>{
-        setSubscribed('Subscribe');
-    }, 1000)
-  };
-
-  const socialLinks = [
-  
-    { icon: <Twitter size={30} />, href: '#' },
-    { icon: <Instagram size={30} />, href: 'https://www.instagram.com/prodcon.manit/?hl=en' },
- 
-    { icon: <Linkedin size={30} />, href: 'https://www.linkedin.com/company/prodcon-the-product-consulting-club-manit-bhopal%C2%A0-nit-b/' },
-  ];
-
+const Footer = () => {
   return (
-    <footer className="bg-indigo-950 text-gray-300 py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo & Description */}
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-white">ProdCon</h2>
-            <p className="text-sm">
-              Driven by ideas
-              <br />
-              Defined by Impact.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((link, idx) => (
-                <motion.a
-                  key={idx}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, color: '#fff' }}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {link.icon}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-2">Company</h3>
-              <ul className="space-y-1 text-sm">
-                <li><a href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn" className="hover:text-white">Resources</a></li>
-                <li><a href="/about" className="hover:text-white">About Us</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-2">Support</h3>
-              <ul className="space-y-1 text-sm">
-                <li><a href="/contact" className="hover:text-white">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-2">Stay Updated</h3>
-            <p className="text-sm mb-4">
-              Subscribe to our email for the latest news and events.
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row sm:space-x-2">
-              <input
-                type="email"
-                required
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg bg-indigo-300 text-gray-900 focus:outline-none mb-2 sm:mb-0"
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                {Subscribed}
-              </button>
-            </form>
+    <footer className="pt-20 pb-10 px-6 border-t border-white/10 bg-black/20 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        {/* Brand */}
+        <div className="col-span-1 md:col-span-1 space-y-6">
+          <h2 className="text-2xl font-black tracking-tighter text-white">PROD<span className="text-purple-600">CON</span></h2>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            Driven by Ideas, Defined by Impact. The strategic bridge between campus and corporate.
+          </p>
+          <div className="flex gap-4">
+            {[Linkedin, Instagram, Twitter].map((Icon, i) => (
+              <a key={i} href="#" className="p-3 rounded-xl bg-white/5 text-gray-500 hover:bg-purple-600 hover:text-white transition-all">
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-800 pt-6 text-center text-sm">
-          © {new Date().getFullYear()} ProdCon. All rights reserved.
+        {/* Links */}
+        <div className="space-y-6">
+          <h4 className="text-sm font-bold uppercase tracking-widest text-white">Platform</h4>
+          <ul className="space-y-4 text-gray-500 text-sm">
+            <li><a href="/about" className="hover:text-purple-500 transition-colors">About Us</a></li>
+            <li><a href="/about#resources" className="hover:text-purple-500 transition-colors">Resources</a></li>
+            <li><a href="/contact" className="hover:text-purple-500 transition-colors">Join Club</a></li>
+          </ul>
         </div>
+
+        {/* Support */}
+        <div className="space-y-6">
+          <h4 className="text-sm font-bold uppercase tracking-widest text-white">Support</h4>
+          <ul className="space-y-4 text-gray-500 text-sm">
+            <li><a href="/contact" className="hover:text-purple-500 transition-colors">Contact Us</a></li>
+            <li><a href="#" className="hover:text-purple-500 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        {/* Newsletter */}
+        <div className="space-y-6">
+          <h4 className="text-sm font-bold uppercase tracking-widest text-white">Stay Updated</h4>
+          <div className="relative">
+            <input 
+              type="email" 
+              placeholder="Your email address" 
+              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pr-12 outline-none focus:border-purple-600 transition-all text-sm"
+            />
+            <button className="absolute right-2 top-2 p-2 rounded-xl bg-purple-600 text-white hover:bg-purple-500 transition-all">
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-gray-600 uppercase tracking-widest">
+        <p>© 2026 PRODCON MANIT BHOPAL</p>
+        <p>Design Driven by Innovation</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
