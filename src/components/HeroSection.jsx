@@ -23,7 +23,7 @@ const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            MANIT Bhopal
+            NIT Bhopal
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white leading-[0.9]">
@@ -31,7 +31,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-lg">
-            Where Strategy Meets Innovation. The premier Product & Consulting hub for future business leaders.
+            Where Strategy Meets Innovation. The premier Product & Consulting Club for future business leaders.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -48,11 +48,21 @@ const HeroSection = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-purple-500 transition-colors"
+            >
+              <ChevronRight size={20} /> Resources
+            </motion.a>
+            {/* <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="/about"
               className="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-white/10 transition-colors"
             >
               Explore Club <ChevronRight size={20} />
-            </motion.a>
+            </motion.a> */}
           </div>
         </motion.div>
 

@@ -102,12 +102,12 @@ const About = () => {
                 Unlock our curated collection of frameworks, casebooks, and PM guides to jumpstart your career.
               </p>
               <a 
-                href="https://drive.google.com/..." 
+                href="https://drive.google.com/drive/folders/1aTNi4nMULJXcaZ_gZqkWv9N2g1pxXbtn" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white text-black px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-purple-600 hover:text-white transition-all group"
               >
-                Access Hub <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+                Resources <ChevronRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
         </section>

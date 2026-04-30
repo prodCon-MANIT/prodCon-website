@@ -25,11 +25,11 @@ const Home = () => {
       {/* Hero: Where Strategy Meets Innovation */}
       <HeroSection />
 
+      {/* Action: What we do */}
+      <Events />
       {/* Proof of Excellence */}
       <Achievements />
 
-      {/* Action: What we do */}
-      <Events />
 
       {/* The Humans behind the Brand */}
       <TeamMembers />
