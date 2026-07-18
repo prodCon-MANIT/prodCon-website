@@ -1,32 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Mail, Users } from 'lucide-react';
-import adityaRajMantriImg from '../assets/aditya_raj_mantri.jpg';
-import yashSharmaImg from '../assets/yash_sharma.jpg';
-import somilPrajapatiImg from '../assets/somil_prajapati.jpg';
-import smritiShrivastavaImg from '../assets/smriti_shrivastava.jpg';
-import ankitKumarYadavImg from '../assets/ankit_kumar_yadav.jpg';
-import rahulHazraImg from '../assets/rahul_hazra.jpg';
-import priyanshKashyapImg from '../assets/priyansh_kashyap.jpg';
-import gautamKumarImg from '../assets/gautam.jpeg';
-import kushagraTiwariImg from '../assets/kushagraTiwariImg.jpg';
-import sakshamGuliyaniImg from '../assets/saksham_guliyani.jpg';
-import swatiHansdaImg from '../assets/SWATIP - Swati Hansda.jpg';
-import ankitaTyagiImg from '../assets/ankita-tyagi.jpg';
+import shreeshSinghImg from '../assets/shreesh_singh.jpeg';
+import ritikaSoniImg from '../assets/ritika_soni.jpg';
+import siddharthKumar from '../assets/siddharth_kumar.jpeg';
+import umangRathodImg from '../assets/umang_rathod.jpg';
+import anuragKalsoiaImg from '../assets/anurag_kalosia.jpg';
+import tejasShrivastavaImg from '../assets/tejas_shrivastava.jpg';
+import ishikaKumariImg from '../assets/ishika_kumari.png';
+import raviRanjanImg from '../assets/ravi_ranjan.jpg';
+import abhaSinghImg from '../assets/abha_singh.jpg';
+import lakshyaWardhanImg from '../assets/lakshya_wardhan.jpeg';
+import aashutoshGuptaImg from '../assets/aashutosh_gupta.jpg';
 
 const members = [
-  { name: 'Ankita Tyagi', position: 'Mentor', department: 'Leadership', image: ankitaTyagiImg, email: 'mailto:ankita.tyagi05@gmail.com', linkedin: '' },
-  { name: 'Kushagra Tiwari', position: 'Co-founder & President', department: 'Leadership', image: kushagraTiwariImg, email: 'mailto:Kushagrat808@gmail.com', linkedin: 'https://www.linkedin.com/in/kushagra-tiwari-373670229/' },
-  { name: 'Gautam Kumar', position: 'Co-founder & VP', department: 'Leadership', image: gautamKumarImg, email: 'mailto:kumargautamsingh104@gmail.com', linkedin: 'https://www.linkedin.com/in/gautam-kumar104/' },
-  { name: 'Saksham Guliyani', position: 'General Secretary & Head of Product', department: 'Product', image: sakshamGuliyaniImg, email: 'mailto:sakshamguliyani91@gmail.com', linkedin: 'https://www.linkedin.com/in/guliyanisaksham' },
-  { name: 'Aditya Raj Mantri', position: 'Overall Coordinator', department: 'Leadership', image: adityaRajMantriImg, email: 'mailto:Adityamantri112014@gmail.com', linkedin: 'https://www.linkedin.com/in/aditya-raj-mantri-868013267' },
-  { name: 'Swati Hansda', position: 'Research & Content Head (Product)', department: 'Product', image: swatiHansdaImg, email: 'mailto:swatihansda1505@gmail.com', linkedin: 'https://www.linkedin.com/in/swati-hansda-795b3a271/' },
-  { name: 'Yash Sharma', position: 'Research & Content Head (Consulting)', department: 'Consulting', image: yashSharmaImg, email: 'mailto:ysharma.engineer@gmail.com', linkedin: 'https://www.linkedin.com/in/yash-sharma-195a3224b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
-  { name: 'Smriti Shrivastava', position: 'Treasurer', department: 'Finance', image: smritiShrivastavaImg, email: 'mailto:smriti.shrivastava130304@gmail.com', linkedin: 'https://www.linkedin.com/in/smriti-shrivastava-a401451b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { name: 'Ankit Kumar Yadav', position: 'Technical Head', department: 'Technical', image: ankitKumarYadavImg, email: 'mailto:ankitofficial0723@gmail.com', linkedin: 'https://www.linkedin.com/in/ankit-kumar-1065b3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { name: 'Somil Prajapati', position: 'Logistics & Ops Secretary', department: 'Operations', image: somilPrajapatiImg, email: 'mailto:Somilprajapati17@gmail.com', linkedin: 'https://www.linkedin.com/in/somil-prajapati-b552052b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { name: 'Rahul Hazra', position: 'Video Editing Head', department: 'Creative', image: rahulHazraImg, email: 'mailto:rahulhazra64@gmail.com', linkedin: 'https://www.linkedin.com/in/rahul-hazra-3b1a7528b' },
-  { name: 'Priyansh Kashyap', position: 'Designing Head', department: 'Creative', image: priyanshKashyapImg, email: 'mailto:createdbypriyansh@gmail.com', linkedin: 'https://www.linkedin.com/in/priyansh-kashyap-9bbbb5259' },
+  { name: 'Shreesh Singh', position: 'Coordinator', department: 'Leadership', image: shreeshSinghImg, email: 'shreeshsingh8934@gmail.com', linkedin: 'https://www.linkedin.com/in/shree-sh/' },
+  { name: 'Umang Rathod', position: 'Co-Coordinator', department: 'Product', image: umangRathodImg, email: 'umangrathod7492@gmail.com', linkedin: 'https://www.linkedin.com/in/umang-rathod-8b16062b6/' },
+  { name: 'Ishika Kumari', position: 'Co-coordinator', department: 'Consulting', image: ishikaKumariImg, email: 'ishikakumari5001@gmail.com', linkedin: 'https://www.linkedin.com/in/ishika-kumari-4b4431372/' },
+  { name: 'Tejas Shrivastava', position: 'Product Management Head', department: 'Product', image: tejasShrivastavaImg, email: 'tjsshrivastava2005@gmail.com', linkedin: 'https://www.linkedin.com/in/tejas-shrivastava-07m05' },
+  { name: 'Ravi Ranjan', position: 'Administrative Head', department: 'Finance', image: raviRanjanImg, email: 'raviranjan12059@gmail.com', linkedin: 'https://www.linkedin.com/in/ravi-ranjan-687458280/' },
+  { name: 'Siddharth Kumar Gupta', position: 'Alumini relations Head', department: 'Leadership', image: siddharthKumar, email: 'siddharthkrgupta00007@gmail.com', linkedin: 'https://www.linkedin.com/in/siddharth-kumar-gupta-869247289/' },
+  { name: 'lakshya wardhan shekhawat', position: 'Technical Head', department: 'Operations', image: lakshyaWardhanImg, email: 'lakshyawardhan2004@gmail.com', linkedin: 'https://www.linkedin.com/in/lakshyawardhan-shekhawat-095696263/' },
+  { name: 'Ritika Soni', position: 'Research and Content Head (Product)', department: 'Leadership', image: ritikaSoniImg, email: 'ritikasoni913127@gmail.com', linkedin: 'https://www.linkedin.com/in/ritika-soni-792a5827b/' },
+  { name: 'Anurag Kalosia', position: 'Content writer Head', department: 'Leadership', image: anuragKalsoiaImg, email: 'anuragkalosia2@gmail.com', linkedin: 'https://www.linkedin.com/in/anurag-kalosia/' },
+  { name: 'Abha Singh', position: 'Designer Head', department: 'Technical', image: abhaSinghImg, email: 'abhasingh0903@gmail.com', linkedin: 'https://www.linkedin.com/in/abha-singh-7a54672ab/' },
+  { name: 'Aashutosh Gupta', position: 'Senior Associate - Consulting', department: 'Creative', image: aashutoshGuptaImg, email: 'aashutosh1118@gmail.com', linkedin: 'https://www.linkedin.com/in/aashutosh-gupta-239764247/' },
 ];
 
 const TeamMembers = () => {
@@ -50,7 +48,7 @@ const TeamMembers = () => {
             className="glass-card group flex flex-col items-center rounded-[2rem] border-t-2 border-t-transparent p-6 text-center hover:border-t-purple-500"
           >
             <div className="mb-6 h-24 w-24 overflow-hidden rounded-full border-2 border-white/10 bg-gradient-to-br from-purple-900/50 to-indigo-900/50 transition-colors group-hover:border-purple-500/50">
-              <img src={member.image} alt={member.name} className="h-full w-full object-cover" loading="lazy" />
+              <img src={member.image} alt={member.name} className="h-full w-full object-cover object-top" loading="lazy" />
             </div>
 
             <h3 className="mb-1 text-sm font-black uppercase tracking-tighter leading-tight text-white">{member.name}</h3>
